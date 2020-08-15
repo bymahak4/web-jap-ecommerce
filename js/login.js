@@ -3,7 +3,7 @@
 //elementos HTML presentes.
 function onSignIn(googleUser){
     console.log("usuario google");
-    window.location.href="Home.html";
+    window.location.href="home.html";
 };
 
 
