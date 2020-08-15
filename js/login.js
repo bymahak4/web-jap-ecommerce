@@ -2,9 +2,9 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 function onSignIn(googleUser){
-    Console.log("Usuario google")};
-
-
+    console.log("usuario google");
+    window.location.href="Home.html";
+};
 document.addEventListener("DOMContentLoaded", function(e){
     
 });
