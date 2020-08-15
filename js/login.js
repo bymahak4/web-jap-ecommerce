@@ -5,6 +5,8 @@ function onSignIn(googleUser){
     console.log("usuario google");
     window.location.href="Home.html";
 };
+
+
 document.addEventListener("DOMContentLoaded", function(e){
     
 });
