@@ -7,78 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="408732925685-peb2b210r5lo0o8413aqa825diku4v19.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="408732925685-dqjdjn9fagbp4a6h8tmceq0djdm1mh9g.apps.googleusercontent.com">
+  <!--<meta name="google-signin-client_id" content="408732925685-peb2b210r5lo0o8413aqa825diku4v19.apps.googleusercontent.com">-->
   <title>eMercado - Todo lo que busques está aquí</title>
-
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <style>
-    html, body{
-      height: 100%;
-    }
-
-    body {    
-      justify-content: center;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      background-color: #F8F9F9;
-    }
-
-    .signin {
-      width: 100%;
-      max-width: 330px;
-      padding: 15px;
-      margin: auto;
-    }
-
-    .btn {
-      background: #D61C6C !important;
-    }
-
-      .btn:hover {
-        background-color: #890B41 !important;
-      }
-    
-       
-  </style>
+  <link rel="stylesheet" href="css/indexLog.css">
 </head>
 
 <body class="text-center">
-  <!--FORMULARIO LOGIN-->
-  <form action="Home.html" id="formLog">
-      <img src="img/login.png" alt="Login" width="450" height="250">
-      <h1 class="h3 mb-3 mt-2 font-weight-normal">Bienvenido</h1>
-      
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control mb-2" placeholder="Email" required autofocus />
-      
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required />
-      
-      <div class="checkbox mb-3 mt-3">
-        <label>
+
+  <div class="box">
+    
+    <h2>e-Mercado
+      <span class="spanEffect"></span>
+      <span class="spanEffect"></span>
+    </h2>
+    
+    <form action="home.html">
+      <div class="inputBox">
+        <input type="text" id="user" value="" maxlength="12" required autofocus>
+        <label class="lblLog">Username</label>
+      </div>
+      <div class="inputBox">
+        <input type="password" name="" required>
+        <label class="lblLog">Password</label>
+      </div>
+      <div class="checkBox">
+        <label id="labelCheckbok"> 
           <input type="checkbox" value="remember-me"> Recordarme
         </label>
       </div>
 
-      <!--BTN LOG-->
-      <button class="btn btn-lg btn-primary btn-block mb-2" type="submit">Entrar</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       
-      <!--BTN LOG GOOGLE-->
-      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-     
-      <!--FOOTER-->
-      <p class="mt-5 mb-3 text-muted"> Todos los derechos reservados &copy; 2020</p>
-  </form> 
+      <div class="g-signin2 d-flex justify-content-center mt-3 mb-1" data-onsuccess="onSignIn" data-theme="dark"></div>
+      
+      <div class="registerUser">
+        <p>¿No tienes una cuenta? <b><a href="">Registrarse</a></b></p>
+      </div>
+      
+    </form>
+  </div>
   
-
+  
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
 </body>

@@ -1,0 +1,215 @@
+ html,body {
+    min-height: 100%; 
+    margin: 0;
+    padding: 0;     
+    background:url("/img/loginBackground3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+
+  .box {
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      padding: 40px;
+      background: rgba(0,0,0,.8);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0,0,0,.5);
+      border-radius: 10px;
+      letter-spacing: 1px;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      
+  }
+  
+    .box .spanEffect{
+        position: absolute;
+        display: block;
+    }
+
+    .box .spanEffect:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background:linear-gradient(90deg, transparent,#D61C6C);
+        animation: lineHorizontal 2s linear infinite;
+    }
+    
+    @keyframes lineHorizontal {
+        0% {
+            left: -100%;
+        }
+        50%, 100% {
+            left: 100%;
+        }
+    }
+    .box .spanEffect:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background:linear-gradient(180deg, transparent,#D61C6C);
+        animation: lineVertical 2s linear infinite;
+        animation-delay: 0.50s;
+    }
+    
+    @keyframes lineVertical {
+        0% {
+            top: -100%;
+        }
+        50%, 100% {
+            top: 100%;
+        }
+    }
+    
+    .box h2 {
+        position: relative;
+        overflow: hidden;
+        margin: 0 0 30px 0;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        
+    }
+    
+    .box .inputBox {
+        position: relative;
+    }
+        .box .inputBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline:none;
+            background: transparent;
+        }
+
+        .box .inputBox .lblLog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+
+        }
+            
+            .box .inputBox input:focus ~ .lblLog,
+            .box .inputBox input:valid ~ .lblLog {
+                top: -18px;
+                left: 0;
+                color: #D61C6C;
+                font-size: 12px;
+            }
+
+    #labelCheckbok {
+        margin-right: -66%;
+        margin-top: -10%;
+        padding: 10px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+        input[type="checkbox"] {
+            position: relative;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            -webkit-appearance: none;
+            outline: none;
+            transition: .5s;
+        }
+
+        input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #262626;
+            box-sizing: border-box;
+            transition: .5s;
+        }
+
+        input:checked[type="checkbox"]:before {
+            border-left: none;
+            border-top: none;
+            width: 10px;
+            border-color: #D61C6C;
+            transform: rotate(45deg);
+        }
+
+    .box button[type="submit"] {
+        background: transparent;
+        border:none;
+        outline: none;
+        font-weight: 400;
+        letter-spacing: 4px;
+        color: #fff;
+        background: #D61C6C;
+        margin: 10px 0 0 0 ;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .box button:hover[type="submit"] {
+        color: #050801;
+        box-shadow: 0 0 5px #fe4164 ,
+                    0 0 25px #fe4164 ,
+                    0 0 50px #fe4164 ,
+                    0 0 200px #fe4164 ;
+    }
+
+    .abcRioButtonContents span {
+        display: none;   
+    }
+        .abcRioButtonContents:after {  
+            font-size: 13px !important;
+            content: "Google" !important;
+            margin-right: 20px;
+        }
+        .abcRioButton {
+            border-radius: 5px !important;
+        } 
+        .abcRioButtonContentWrapper, 
+        .abcRioButtonIcon, 
+        .abcRioButton {
+            background-color: #D61C6C !important;
+        }
+
+        .abcRioButtonContentWrapper:hover,
+        .abcRioButton:hover {
+            color: #050801 !important;
+            box-shadow: 0 0 5px #fe4164 ,
+                        0 0 25px #fe4164 ,
+                        0 0 50px #fe4164 ,
+                        0 0 200px #fe4164 !important;
+        }
+
+    .registerUser p {
+        margin: 40px 0 0 0;
+        justify-content: ce;
+        color: #fff;
+    }
+    .registerUser b {
+        color: #D61C6C;
+    }
+    .registerUser a{
+        color: #D61C6C;
+    }
+    
+
