@@ -19,7 +19,7 @@ nav .divLogo {
     align-items: center;
 }
 
-nav div a { 
+nav .divNav a { 
     margin-left: 10%;
     text-decoration: none !important;
     font-size: 15px;
