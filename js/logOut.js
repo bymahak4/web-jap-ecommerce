@@ -1,22 +1,24 @@
-function userOut() {
+function signOut() {
     
-    var salir = gapi.salir.getAuthInstance();
-    salir.userOut();
-    salir.disconnect();
+    var auth2 = gapi.auth2.getAuthInstance();
+    
+    auth2.signOut();
+    auth2.disconnect();
 }
 
-function clear() {
-    var user = localStorage.getItem('passsword');
-    localStorage.clear();
+function init() {
     
-    if (user = !unedefined) {
-        window.location.href = "index.html";
+    var userNormal = localStorage.getItem('password');
+    localStorage.clear();
+        
+    if(userNormal != undefined){   
+        window.location.href="index.html";
     };
-    gapi.load('salir', function(){
-        gapi.salir.clear().then(function (e){
-            salir();
+    
+        gapi.load('auth2', function() {
+        gapi.auth2.init().then(function(e){
+            signOut();
             window.location.href="index.html";
         });
     });
-   
 }

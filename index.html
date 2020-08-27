@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <meta name="google-signin-client_id" content="408732925685-dqjdjn9fagbp4a6h8tmceq0djdm1mh9g.apps.googleusercontent.com">
-  <!--<meta name="google-signin-client_id" content="408732925685-peb2b210r5lo0o8413aqa825diku4v19.apps.googleusercontent.com">-->
+  <!--<meta name="google-signin-client_id" content="408732925685-dqjdjn9fagbp4a6h8tmceq0djdm1mh9g.apps.googleusercontent.com">-->
+  <meta name="google-signin-client_id" content="408732925685-peb2b210r5lo0o8413aqa825diku4v19.apps.googleusercontent.com">
   <title>eMercado - Todo lo que busques está aquí</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+ 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="css/indexLog.css">
@@ -28,11 +29,11 @@
     
     <form action="home.html">
       <div class="inputBox">
-        <input type="text" id="user" value="" maxlength="12" required autofocus>
+        <input type="text" id="user" name="user" value="" maxlength="12" required autofocus>
         <label class="lblLog">Username</label>
       </div>
       <div class="inputBox">
-        <input type="password" name="" required>
+        <input type="password" name="password" id="password" required>
         <label class="lblLog">Password</label>
       </div>
       <div class="checkBox">
@@ -41,7 +42,7 @@
         </label>
       </div>
 
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+      <button id="btnLog" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
       
       <div class="g-signin2 d-flex justify-content-center mt-3 mb-1" data-onsuccess="onSignIn" data-theme="dark"></div>
       
@@ -52,7 +53,8 @@
     </form>
   </div>
   
-  <script src="js/logIn.js"></script>
+
   <script src="js/init.js"></script>
+  <script src="js/logIn.js"></script>
 </body>
 </html>
