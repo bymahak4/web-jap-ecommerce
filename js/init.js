@@ -1,11 +1,12 @@
-const CATEGORIES_URL = "https://japdevdep.github.io/ecommerce-api/category/all.json";
-const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
-const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
-const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json";
-const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
+const CATEGORIES_URL            = "https://japdevdep.github.io/ecommerce-api/category/all.json";
+const PUBLISH_PRODUCT_URL       = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
+const CATEGORY_INFO_URL         = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
+const PRODUCTS_URL              = "https://japdevdep.github.io/ecommerce-api/product/all.json";
+const PRODUCT_INFO_URL          = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
-const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
-const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
+const CART_INFO_URL             = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
+const CART_BUY_URL              = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
+
 
 // EFECTO
 var showSpinner = function(){
@@ -29,13 +30,13 @@ var getJSONData = function(url){
     })
     .then(function(response) {
           result.status = 'ok';
-          result.data = response;
+          result.data   = response;
           hideSpinner();
           return result;
     })
     .catch(function(error) {
         result.status = 'error';
-        result.data = error;
+        result.data   = error;
         hideSpinner();
         return result;
     });
@@ -46,10 +47,10 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
  
-    var userGet = localStorage.getItem("Name");
-    var userInfo = document.getElementById("userMenu");
+    var userGetName   = localStorage.getItem("Name");
+    var userInfoA  = document.getElementById("userMenu");
 
-    userInfo.innerHTML += userGet;
+    userInfoA.innerHTML += userGetName;
 
   
     

@@ -1,28 +1,28 @@
-let productCost = 0;
-let productCount = 0;
+let productCost         = 0;
+let productCount        = 0;
 let comissionPercentage = 0.13;
-let MONEY_SYMBOL = "$";
-let DOLLAR_CURRENCY = "Dólares (USD)";
-let PESO_CURRENCY = "Pesos Uruguayos (UYU)";
-let DOLLAR_SYMBOL = "USD ";
-let PESO_SYMBOL = "UYU ";
-let PERCENTAGE_SYMBOL = '%';
-let SUCCESS_MSG = "¡Se ha realizado la publicación con éxito! :)";
-let ERROR_MSG = "Ha habido un error :(, verifica qué pasó.";
+let MONEY_SYMBOL        = "$";
+let DOLLAR_CURRENCY     = "Dólares (USD)";
+let PESO_CURRENCY       = "Pesos Uruguayos (UYU)";
+let DOLLAR_SYMBOL       = "USD ";
+let PESO_SYMBOL         = "UYU ";
+let PERCENTAGE_SYMBOL   = '%';
+let SUCCESS_MSG         = "¡Se ha realizado la publicación con éxito! :)";
+let ERROR_MSG           = "Ha habido un error :(, verifica qué pasó.";
 
 //Función que se utiliza para actualizar los costos de publicación
 function updateTotalCosts(){
     let unitProductCostHTML = document.getElementById("productCostText");
-    let comissionCostHTML = document.getElementById("comissionText");
-    let totalCostHTML = document.getElementById("totalCostText");
+    let comissionCostHTML   = document.getElementById("comissionText");
+    let totalCostHTML       = document.getElementById("totalCostText");
 
-    let unitCostToShow = MONEY_SYMBOL + productCost;
+    let unitCostToShow  = MONEY_SYMBOL + productCost;
     let comissionToShow = Math.round((comissionPercentage * 100)) + PERCENTAGE_SYMBOL;
     let totalCostToShow = MONEY_SYMBOL + (Math.round(productCost * comissionPercentage * 100) / 100);
 
-    unitProductCostHTML.innerHTML = unitCostToShow;
-    comissionCostHTML.innerHTML = comissionToShow;
-    totalCostHTML.innerHTML = totalCostToShow;
+    unitProductCostHTML.innerHTML   = unitCostToShow;
+    comissionCostHTML.innerHTML     = comissionToShow;
+    totalCostHTML.innerHTML         = totalCostToShow;
 }
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
@@ -82,10 +82,10 @@ document.addEventListener("DOMContentLoaded", function(e){
     //lanzado por el formulario cuando se seleccione 'Vender'.
     sellForm.addEventListener("submit", function(e){
 
-        let productNameInput = document.getElementById("productName");
-        let productCategory = document.getElementById("productCategory");
-        let productCost = document.getElementById("productCostInput");
-        let infoMissing = false;
+        let productNameInput    = document.getElementById("productName");
+        let productCategory     = document.getElementById("productCategory");
+        let productCost         = document.getElementById("productCostInput");
+        let infoMissing         = false;
 
         //Quito las clases que marcan como inválidos
         productNameInput.classList.remove('is-invalid');

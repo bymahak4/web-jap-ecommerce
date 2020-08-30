@@ -1,10 +1,11 @@
-const ORDER_ASC_BY_NAME = "AZ";
-const ORDER_DESC_BY_NAME = "ZA";
-const ORDER_BY_PROD_COUNT = "Cant.";
-var currentCategoriesArray = [];
-var currentSortCriteria = undefined;
-var minCount = undefined;
-var maxCount = undefined;
+const ORDER_ASC_BY_NAME     = "AZ";
+const ORDER_DESC_BY_NAME    = "ZA";
+const ORDER_BY_PROD_COUNT   = "Cant.";
+var currentCategoriesArray  = [];
+var currentSortCriteria     = undefined;
+var minCount                = undefined;
+var maxCount                = undefined;
+var barraFiltrador          = undefined;
 
 function sortCategories(criteria, array){
     let result = [];
@@ -15,19 +16,28 @@ function sortCategories(criteria, array){
             if ( a.name > b.name ){ return 1; }
             return 0;
         });
-    }else if (criteria === ORDER_DESC_BY_NAME){
+    }else if (criteria === ORDER_DESC_BY_NAME) {
         result = array.sort(function(a, b) {
             if ( a.name > b.name ){ return -1; }
             if ( a.name < b.name ){ return 1; }
             return 0;
         });
-    }else if (criteria === ORDER_BY_PROD_COUNT){
+    }else if (criteria === ORDER_BY_PROD_COUNT) {
         result = array.sort(function(a, b) {
             let aCount = parseInt(a.productCount);
             let bCount = parseInt(b.productCount);
 
             if ( aCount > bCount ){ return -1; }
             if ( aCount < bCount ){ return 1; }
+            return 0;
+        });
+    }else if (criteria === ORDER_BY_PROD_COUNT) {
+        result = array.sort(function(a, b) {
+            let aCount = parseInt(a.productCount);
+            let bCount = parseInt(b.productCount);
+
+            if ( aCount < bCount ){ return -1; }
+            if ( aCount > bCount ){ return 1; }
             return 0;
         });
     }
@@ -39,27 +49,36 @@ function showCategoriesList(){
 
     let htmlContentToAppend = "";
     for(let i = 0; i < currentCategoriesArray.length; i++){
-        let category = currentCategoriesArray[i];
+        let category            = currentCategoriesArray[i];
+        let categoryName        = category.name.toUpperCase();
+        let categoryDescription = category.description.toUpperCase();
+        
+        if (barraFiltrador != undefined){
+            barraFiltrador = barraFiltrador.toUpperCase();
+        }
 
-        if (((minCount == undefined) || (minCount != undefined && parseInt(category.productCount) >= minCount)) &&
-            ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount) <= maxCount))){
+        if((barraFiltrador == undefined) || (categoryName.includes(barraFiltrador)) || (categoryDescription.includes(barraFiltrador))){
 
-            htmlContentToAppend += `
-            <a href="category-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ category.name +`</h4>
-                            <small class="text-muted">` + category.productCount + ` artículos</small>
+            if (((minCount == undefined) || (minCount != undefined && parseInt(category.productCount) >= minCount)) &&
+                ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount) <= maxCount))){
+
+                htmlContentToAppend += `
+                <a href="category-info.html" class="list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
                         </div>
-                        <p class="mb-1">` + category.description + `</p>
+                        <div class="col">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h4 class="mb-1">`+ category.name +`</h4>
+                                <small class="text-muted">` + category.productCount + ` artículos</small>
+                            </div>
+                            <p class="mb-1">` + category.description + `</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-            `
+                </a>
+                `
+            }
         }
 
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
@@ -133,4 +152,10 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         showCategoriesList();
     });
+
+    document.getElementById("inputSearch").addEventListener("keyup", function(){
+        barraFiltrador = document.getElementById("inputSearch").value;
+    
+        showCategoriesList();
+    })
 });

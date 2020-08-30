@@ -1,29 +1,27 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
+var formulario = document.forms[0];
 
 function onSignIn(googleUser) {
-
+    
     var profile = googleUser.getBasicProfile();
-    localStorage.setItem('Name',profile.getName());
-
-        localStorage.setItem('Name',profile.getGivenName());
-        localStorage.setItem('Email',profile.getEmail());
-        window.location.href="home.html";
-        
+    
+    localStorage.setItem('Name',profile.getGivenName());
+    
+    window.location.href = "home.html"; 
           
-    }
+}
 
-    var form = document.forms[0];
-    form.addEventListener('submit', function(e){
-        var user = form[0].value;
-        var password = form[1].value;
-        localStorage.setItem('Name',user);
+    formulario.addEventListener('submit', function(e){
+        var user        = formulario[0].value;
+        var password    = formulario[1].value;
         
+        e.preventDefault();         /*corregir esta mal aplicado*/
+        localStorage.setItem('Name', user);
+        localStorage.setItem('password', password);
+        
+        window.location.href = "home.html";
     })
     
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    
     
 });
