@@ -1,19 +1,24 @@
 var formulario = document.forms[0];
 
 function onSignIn(googleUser) {
-    console.log("Name");
+    var profile = googleUser.getBasicProfile();
     
     localStorage.setItem('Name',profile.getName());
+
+    if (localStorage.getItem('Name') != undefined || sessionStorage.getItem('Name') != null){
+        
+        localStorage.setItem('Name',profile.getGivenName());
+        localStorage.setItem('Email',profile.getEmail());
     
-    window.location.href = "home.html"; 
-          
+        window.location.href = "home.html";        
+  }
 }
 
     formulario.addEventListener('submit', function(e){
         var user        = formulario[0].value;
         var password    = formulario[1].value;
         
-        e.preventDefault();         
+                
         
         localStorage.setItem('Name', user);
         localStorage.setItem('password', password);
@@ -23,6 +28,7 @@ function onSignIn(googleUser) {
     
 
 document.addEventListener("DOMContentLoaded", function (e) {
+    
     if (localStorage.getItem('Name') != undefined){
         window.location.href = "home.html";
       }
