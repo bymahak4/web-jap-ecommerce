@@ -14,6 +14,7 @@ function onSignIn(googleUser) {
         var password    = formulario[1].value;
         
         e.preventDefault();         
+        
         localStorage.setItem('Name', user);
         localStorage.setItem('password', password);
         
