@@ -13,10 +13,11 @@ function onSignIn(googleUser) {
 }
 
     formulario.addEventListener('submit', function(e){
+        
         var user        = formulario[0].value;
         var password    = formulario[1].value;
         
-                
+        e.defaultPrevented();
         
         localStorage.setItem('Name', user);
         localStorage.setItem('password', password);
