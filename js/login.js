@@ -23,5 +23,7 @@ function onSignIn(googleUser) {
     
 
 document.addEventListener("DOMContentLoaded", function (e) {
-    
+    if (localStorage.getItem('Name') != undefined){
+        window.location.href = "home.html";
+      }
 });
