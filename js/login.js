@@ -1,10 +1,9 @@
 var formulario = document.forms[0];
 
 function onSignIn(googleUser) {
+    console.log("UsuarioGoogle");
     
-    var profile = googleUser.getBasicProfile();
-    
-    localStorage.setItem('Name',profile.getGivenName());
+    localStorage.setItem('Name',profile.getName());
     
     window.location.href = "home.html"; 
           
@@ -14,7 +13,7 @@ function onSignIn(googleUser) {
         var user        = formulario[0].value;
         var password    = formulario[1].value;
         
-        e.preventDefault();         /*corregir esta mal aplicado*/
+        e.preventDefault();         
         localStorage.setItem('Name', user);
         localStorage.setItem('password', password);
         
