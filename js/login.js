@@ -1,7 +1,7 @@
 var formulario = document.forms[0];
 
 function onSignIn(googleUser) {
-    console.log("UsuarioGoogle");
+    console.log("Name");
     
     localStorage.setItem('Name',profile.getName());
     
