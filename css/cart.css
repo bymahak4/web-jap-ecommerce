@@ -1,0 +1,297 @@
+/*---------------------
+  Nav Money Shop Cart
+-----------------------*/
+.headerRight {
+    padding-bottom: 25px;
+    padding-top: 5px;
+}
+
+.headerRight .headerRightWidget .currencyBox {
+	font-size: 13px;
+	display: inline-block;
+	bottom: 54px;
+	right: 0;
+	margin-left: 50%;
+	font-weight: 600;
+	color: #1fa104;
+}
+
+
+/*---------------------
+  Shop Cart
+-----------------------*/
+
+.shopCart {
+	padding-top: 70px;
+	padding-bottom: 90px;
+}
+
+.shopCartTable {
+	margin-bottom: 30px;
+}
+
+.shopCartTable table {
+	width: 100%;
+}
+
+.shopCartTable thead {
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.shopCartTable thead th {
+	font-size: 18px;
+	color: #111111;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+}
+
+.shopCartTable tbody tr {
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.shopCartTable tbody tr td {
+	padding: 30px 0;
+}
+
+.shopCartTable tbody tr .cartProductItem {
+	overflow: hidden;
+	width: 585px;
+}
+
+.shopCartTable tbody tr .cartProductItem img {
+	float: left;
+	margin-right: 25px;
+}
+
+.shopCartTable tbody tr .cartProductItem .cartProductItemTitle {
+	overflow: hidden;
+	padding-top: 23px;
+}
+
+.shopCartTable tbody tr .cartProductItem .cartProductItemTitle h6 {
+	color: #111111;
+	font-weight: 600;
+}
+
+.shopCartTable tbody tr .cartPrice {
+	font-size: 16px;
+	color: #ca1515;
+	font-weight: 600;
+	width: 190px;
+}
+
+.shopCartTable tbody tr .cartQuantity {
+	width: 190px;
+}
+
+					 .qtybtn {
+						font-size: 14px;
+						color: #666666;
+						cursor: pointer;
+						float: left;
+						width: 12px;
+						line-height: 46px;
+					}
+
+					.proQty input {
+						font-size: 14px;
+						color: #666666;
+						font-weight: 500;
+						border: none;
+						float: left;
+						width: 84px;
+						text-align: center;
+						height: 48px;
+					}
+
+.shopCartTable tbody tr .cartQuantity .proQty {
+	padding: 0;
+	width: 110px;
+	border-radius: 0;
+}
+
+.shopCartTable tbody tr .cartQuantity .proQty input {
+	color: #444444;
+	background: transparent;
+}
+
+.shopCartTable tbody tr .cartQuantity .proQty .qtybtn {
+	font-size: 16px;
+	color: #444444;
+}
+
+.shopCartTable tbody tr .cartTotal {
+	font-size: 16px;
+	color: #ca1515;
+	font-weight: 600;
+	width: 150px;
+}
+
+.shopCartTable tbody tr .cartClose {
+	text-align: right;
+	
+}
+
+.shopCartTable tbody tr .cartClose span {
+	height: 45px;
+	width: 45px;
+	background: #f2f2f2;
+	border-radius: 50%;
+	font-size: 18px;
+	color: #111111;
+	line-height: 44px;
+	text-align: center;
+	display: inline-block;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.cartBtn {
+	margin-bottom: 50px;
+}
+
+.cartBtn.updateBtn {
+	text-align: right;
+}
+
+.cartBtn a {
+	font-size: 14px;
+	color: #111111;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 14px 30px 12px;
+	background: #cfcfcf;
+}
+
+.cartBtn a span {
+	color: #ca1515;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.cartBtn .opShipping {
+	font-size: 14px;
+	color: #111111;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 14px 30px 12px;
+	background: #cfcfcf;
+}
+
+.cartBtn .opShipping h5 {
+	color: #ca1515;
+	font-weight: 520;
+	margin-right: 5px;
+	margin-bottom: 15px;
+}
+
+.cartBtn .opShipping li {
+	font-size: 14px;
+	list-style: none;
+	color: #111111;
+	margin: 5px;
+	padding-left: 5px;
+}
+
+.discountContent h6 {
+	color: #111111;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.discountContent form {
+	position: relative;
+	width: 370px;
+	display: inline-block;
+}
+
+.discountContent form input {
+	height: 52px;
+	width: 100%;
+	border: 1px solid #666666;
+	border-radius: 50px;
+	padding-left: 30px;
+	padding-right: 115px;
+	font-size: 14px;
+	color: #444444;
+}
+
+.discountContent form input::-webkit-input-placeholder {
+	color: #444444;
+}
+
+.discountContent form input::-moz-placeholder {
+	color: #444444;
+}
+
+.discountContent form input:-ms-input-placeholder {
+	color: #444444;
+}
+
+.discountContent form input::-ms-input-placeholder {
+	color: #444444;
+}
+
+.discountContent form input::placeholder {
+	color: #444444;
+}
+
+.discountContent form button {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+
+.cartTotalProcced {
+	background: #cfcfcf;
+	padding: 40px;
+}
+
+.cartTotalProcced h6 {
+	color: #111111;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	text-decoration-line: underline;
+}
+
+.cartTotalProcced ul {
+	margin-bottom: 25px;
+}
+
+.cartTotalProcced ul li {
+	list-style: none;
+	font-size: 16px;
+	color: #111111;
+	font-weight: 600;
+	overflow: hidden;
+	line-height: 40px;
+}
+
+.cartTotalProcced ul li span {
+	color: #ca1515;
+	float: right;
+}
+
+.cartTotalProcced ul li .spanTotal {
+	color: #1fa104;
+	font-weight: 650;
+}
+
+.cartTotalProcced .primary-btn {
+	display: block;
+	border-radius: 50px;
+	text-align: center;
+	padding: 12px 0 10px;
+	color: white;
+}
+
+
+/*******************************************/
+
+

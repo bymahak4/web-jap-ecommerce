@@ -1,0 +1,152 @@
+/*---------------------
+  Contact
+-----------------------*/
+
+.contact {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.contactAddress {
+	margin-bottom: 45px;
+}
+
+.contactAddress h5 {
+	color: #111111;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.contactAddress ul li {
+	list-style: none;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.contactAddress ul li:last-child {
+	margin-bottom: 0;
+}
+
+.contactAddress ul li h6 {
+	color: #111111;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.contactAddress ul li h6 i {
+	font-size: 16px;
+	color: #ca1515;
+	margin-right: 5px;
+}
+
+.contactAddress ul li p {
+	margin-bottom: 0;
+	font-size: 15px;
+	color: #444444;
+}
+
+.contactAddress ul li span {
+	font-size: 15px;
+	color: #444444;
+	display: inline-block;
+	margin-right: 25px;
+	position: relative;
+}
+
+.contactAddress ul li span:after {
+	position: absolute;
+	right: -15px;
+	top: 11px;
+	content: "|";
+	line-height: 0;
+}
+
+.contactAddress ul li span:last-child {
+	margin-right: 0;
+}
+
+.contactAddress ul li span:last-child:after {
+	display: none;
+}
+
+.contactForm h5 {
+	color: #111111;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 35px;
+}
+
+.contactForm form input {
+	height: 50px;
+	width: 100%;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #444444;
+	border: 1px solid #e1e1e1;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.contactForm form input::-webkit-input-placeholder {
+	color: #444444;
+}
+
+.contactForm form input::-moz-placeholder {
+	color: #444444;
+}
+
+.contactForm form input:-ms-input-placeholder {
+	color: #444444;
+}
+
+.contactForm form input::-ms-input-placeholder {
+	color: #444444;
+}
+
+.contactForm form input::placeholder {
+	color: #444444;
+}
+
+.contactForm form textarea {
+	height: 130px;
+	width: 100%;
+	padding-left: 20px;
+	padding-top: 12px;
+	font-size: 14px;
+	color: #444444;
+	border: 1px solid #e1e1e1;
+	border-radius: 10px;
+	margin-bottom: 14px;
+	resize: none;
+}
+
+.contactForm form textarea::-webkit-input-placeholder {
+	color: #444444;
+}
+
+.contactForm form textarea::-moz-placeholder {
+	color: #444444;
+}
+
+.contactForm form textarea:-ms-input-placeholder {
+	color: #444444;
+}
+
+.contactForm form textarea::-ms-input-placeholder {
+	color: #444444;
+}
+
+.contactForm form textarea::placeholder {
+	color: #444444;
+}
+
+.contactMap {
+	height: 780px;
+}
+
+.contactMap iframe {
+	width: 100%;
+}

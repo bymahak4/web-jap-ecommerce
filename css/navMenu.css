@@ -1,5 +1,5 @@
 nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,11 +12,9 @@ nav {
 
 nav .divLogo {
     font-weight: 700;
-    margin-left: -6.5%;
     color: #fff;
     font-size: 20px;
     transition: 0.6s;
-    align-items: center;
 }
 
 nav .divNav a { 

@@ -7,67 +7,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
-
+<!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+ 
   <link rel="stylesheet" href="css/navMenu.css">
+  <link rel="stylesheet" href="css/productInfo.css">
+  
+
 </head>
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="divLogo">e-Mercado</div>
     <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="divLogo py-2 d-none d-md-inline-block" href="home.html">e-Mercado</a>
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="userMenu" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" ></a>
+      <a id="userMenu" class="py-2 d-none d-md-inline-block nav-link dropdown-toggle" href="#" data-toggle="dropdown"></a>
           <div id="profileUser" class="dropdown-menu">
-            <a class="dropdown-item" id="buyUser" href="#">Compras</a>
+            <a class="dropdown-item" id="verCarrito" href="cart.html">Mi carrito</a>
             <a class="dropdown-item" id="profileUser" href="my-profile.html">Mis Datos</a>
             <a class="dropdown-item" id="logOutUser" href="logOut.html">Salir</a>
           </div>
     </div>
   </nav>
   
-    <div class="box">
-
-      
-
-
-
-
-
-      <div id="divCommentAdd">  <!--generar comentrio agregado-->
-          
+  <div class="container">
+    <div class="nombreProducto">
+      <h1 class="row" id="nombreAuto"></h1>
+    </div>
+    <div class="descripcionProdcuto row">
+      <div class="carousel center-aling">
+          <div class="carousel-item">
+            <img id="img-0">
+          </div>
+          <div class="carousel-item">
+            <img id="img-1">
+          </div>
+          <div class="carousel-item">
+            <img id="img-2">
+          </div>
+          <div class="carousel-item">
+            <img id="img-3">
+          </div>
+          <div class="carousel-item">
+            <img id="img-4">
+          </div> 
       </div>
 
-
-
-
-      <div class="divh4AddComment">
-        <h4>Agregar Nuevo comentario</h4>
-      </div>
-
-      <div class="">
-        <textarea name="" id="txtareaComment" cols="70" rows="4"></textarea>
-      
-        <input type="submit" id="btnLoadComment">
-  
-      </div>
-      
-
-
+    <div class="list-group" id="producto"></div>
     </div>
 
+    <div class="row">
+     
+        <div class="col-12">
+          <h4 class="text-center">Opiniones sobre el producto</h4>
+          
+          <div class="col-12" id="cargarComentarios"></div>
+          
+          <div class="col-12 mt-4" id="agregarComentario"></div> 
+        </div> 
+    </div> 
+    
+    <hr>
+    
+    <div class="d-flex" id="productoRelacionado"></div>
+  </div>
 
-
-
-
+  
+  
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -77,18 +93,14 @@
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/badge.js"></script>
 </body>
 
 </html>

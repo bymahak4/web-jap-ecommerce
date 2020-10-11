@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+   
+        <!-- Web Icon -->
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+           
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+      
+        <!-- CSS Style --> 
+        <link rel="stylesheet"  href="css/bootstrap.min.css"    type="text/css">
+        <link rel="stylesheet"  href="css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet"  href="css/magnific-popup.css"   type="text/css">
+        <link rel="stylesheet"  href="css/elegant-icons.css"    type="text/css">
+        <link rel="stylesheet"  href="css/slicknav.min.css"     type="text/css">
+        <link rel="stylesheet"  href="css/styles.css"           type="text/css">
+        <link rel="stylesheet"  href="css/home.css"             type="text/css">
+        <link rel="stylesheet"  href="css/checkout.css"         type="text/css">
+        
+      </head>
+      
+      <body>
+        
+        <!--Page Preloder Begin -->
+        <div id="preloder">
+          <div class="loader"></div>
+        </div>
+        <!-- Page Preloder End -->
+        
+      
+        <!-- Offcanvas Menu Begin -->
+        <div class="offcanvasMenuOverlay"></div>
+        <div class="offcanvasMenuWrapper">
+          <div class="offcanvasClose">+</div>
+          <ul class="offcanvasWidget">
+            <li><span class="icon_search searchSwitch"></span></li>
+            <li><a href=""><span class="icon_heart_alt"></span>
+              <div class="tip">2</div>
+            </a></li>
+            <li><a><span class="far fa-bell"></span>
+              <div class="tip">1</div>
+            </a></li>
+          </ul>
+          <div class="offcanvasLogo">
+            <a href="home.html"><img src="img/logo__small.png" alt=""></a>
+          </div>
+          <div id="mobileMenuWrap"></div>
+          <div class="offcanvasUser">
+            <a href="my-profile.html" id="aOffcanvasUser"></a>
+          </div>
+        </div>
+        <!-- Offcanvas Menu End -->
+      
+      
+        <!-- Navegation Section Begin -->
+        <header class="header">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-3 col-lg-2">
+                <div class="headerLogo">
+                  <a href="home.html"><img src="img/logo__small.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-7">
+                <nav class="headerMenu">
+                  <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="categories.html"         >Categorias</a>
+                      <ul class="dropdown">
+                        <li><a href="">Vehículos</a></li>
+                        <li><a href="">Juguetes</a></li>
+                        <li><a href="">Hogar</a></li>
+                        <li><a href="">Herramientas</a></li>
+                        <li><a href="">Tecnologias</a></li>
+                        <li><a href="">Vestimenta</a></li>
+                        <li><a href="">Libros</a></li>
+                        <li><a href="">Salud y Belleza</a></li>
+                        <li><a href="">Instrumentos Musicales</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="products.html"           >Productos</a></li>
+                    <li><a href="sell.html"               >Vender</a></li>
+                    <li><a href="contact.html"            >Nosotros</a></li>
+                    <!--<li><a href=""                     >Ayuda</a></li>-->
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-lg-3">
+                <div class="headerRight">
+                  <div class="headerRightAuth">
+                    <ul>
+                      <li><span class="icon_profile"> </span><a href="#" id="userMenu"></a>
+                        <ul class="dropdown">
+                          <li><a href="cart.html"><span class="icon_bag"></span> Mi carrito
+                            <div class="tip">2</div>
+                          </a></li>
+                          <li><a href="my-profile.html"><span class="icon_profile"></span> Mis Datos</a></li>
+                          <li><a href="historyProduct.html"><span class="icon_document"></span> Historial</a></li>
+                          <!--<hr style="width: 95%;">-->
+                          <li><a href="logOut.html"><span class="icon_mug"></span> Salir</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="headerRightWidget">
+                    <li><span class="icon_search searchSwitch"></span></li>
+                    <li><a href="#" alt="favoritos">
+                      <span class="icon_heart_alt"></span>
+                      <div class="tip">1</div>
+                    </a></li>
+                    <li><span class="far fa-bell"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="canvasOpen">
+              <span class="arrow_carrot-left"></span>
+            </div>
+          </div>
+        </header>
+        <!-- Navegation Section End -->
+      
+        <!-- Breadcrumb Begin -->
+        <div class="breadcrumbOption">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="breadcrumbLinks">
+                          <a href="home.html"><i class="fa fa-home"></i> Home</a>
+                          <a href="cart.html">Carrito</a>
+                          <span>Checkout</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+        <!-- Checkout Section Begin -->
+    <section class="checkout spad">
+        <div class="container">
+            <form action="#" class="checkout__form">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h5>Ingresa Tus Datos</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Nombre <span>*</span></p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Apellido <span>*</span></p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="checkout__form__input">
+                                    <p>Departamento <span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>Barrio <span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>Codigo Postal <span>*</span></p>
+                                    <input type="text">
+                                </div>
+                                <div class="checkout__form__input">
+                                    <p>Direccion <span>*</span></p>
+                                    <input type="text" placeholder="Direccion">
+                                    <input type="text" placeholder="Numero de Puerta, Esquina">
+                                </div>    
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Telefono <span>*</span></p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="checkout__form__input">
+                                    <p>Email <span>*</span></p>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                    <div class="checkout__form__input">
+                                        <p>Ingresar Contraceña <span>*</span></p>
+                                        <input type="text">
+                                    </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="checkout__order">
+                                <h5>Su Orden</h5>
+                                <div class="checkout__order__product">
+                                    <ul>
+                                        <li>
+                                            <span class="top__text">Producto</span>
+                                            <span class="top__text__right">Total</span>
+                                        </li>
+                                        <li>01. <span>U$D 170.0</span></li>
+                                        <li>02. Championes Nike White <span>U$D 179.0</span></li>
+                                    </ul>
+                                </div>
+                                <div class="checkout__order__total">
+                                    <ul>
+                                        <li>Subtotal <span>U$D 349.0</span></li>
+                                        <li>Total <span>U$D 349.0</span></li>
+                                    </ul>
+                                </div>
+                                <div class="checkout__order__widget">
+                                    <label for="paypal">
+                                        PayPal
+                                        <input type="checkbox" id="paypal">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="site-btn">Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Checkout Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <div class="footerAbout">
+                        <div class="footerLogo">
+                            <a href="home.html"><img src="img/logo__small.png" alt=""></a>
+                        </div>
+                        <p>Somos la empresa lider en compras online con buena reputacion a nivel nacional. 
+                            e-Mercado cuenta con los certificados verificados para garantizar 
+                            la seguridad de la compra.</p>
+                        <div class="footerPayment">
+                        <a><img src="img/methodPayments/cards.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footerWidget">
+                        <h6>Informacion</h6>
+                        <ul>
+                            <li><a href="contact.html">Nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html#contact">Contacto</a></li>
+                            <li><a href="helpFAQ.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="footerWidget">
+                        <h6>Cuenta</h6>
+                        <ul>
+                            <li><a href="my-profile.html">Mi Cuenta</a></li>
+                            <li><a href="ordersTracking.html">Seguimiento</a></li>
+                            <li><a href="cart.html">Checkout</a></li>
+                            <li><a href="followProducts.html">Favoritos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-8">
+                    <div class="footerNewsLatter">
+                        <h6>Regístrate a nuestro Newsletter</h6>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit" class="site-btn">Subscribe</button>
+                        </form>
+                        <div class="footerSocial">
+                            <a href="https://www.facebook.com/E-Mercado_JaP-108587171003909/?modal=admin_todo_tour"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/eMercadoJaP1"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCdZk8pVmlpY9-Wp2Yan3PXQ?view_as=subscriber"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/emercadojap/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.pinterest.com/emercadojap/_saved/"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footerCopyrightText">
+                    <p>Este sitio forma parte de Desarrollo Web - JAP 2020 | Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+                    <p>Copyright &copy; <span id="year"></span> Todos los derechos reservados | Jovenes A Programar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/init.js"></script>
+    </body>
+</html>

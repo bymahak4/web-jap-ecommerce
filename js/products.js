@@ -1,5 +1,3 @@
-/*jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj*/
-
 const ORDER_ASC_BY_NAME         = "AZ";
 const ORDER_DESC_BY_NAME        = "ZA";
 const ORDER_BY_PROD_SOLD_COUNT  = "SoldCount";
@@ -83,24 +81,24 @@ function showCategoriesList(){
                 ((maxCount == undefined) || (maxCount != undefined && parseInt(producto.cost) <= maxCount))){
 
                 htmlContentToAppend += `
-                <div class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + producto.imgSrc + `" alt="` + producto.description + `" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ producto.name +`</h4>
-                        <small class="text-muted"><b>` + producto.soldCount + ` Vendidos</b></small>
+                <a href="product-info.html" class="list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="` + producto.imgSrc + `" alt="` + producto.description + `" class="img-thumbnail">
+                        </div>
+                        <div class="col">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h4 class="mb-1">`+ producto.name +`</h4>
+                                <small class="text-muted"><b>` + producto.soldCount + ` Vendidos</b></small>
+                            </div>
+                            <div>
+                                <p>`+ producto.description +`</p>
+                                <p><b>Precio:</b> US$ ` + producto.cost +`</p>
+                            </div>     
+                        </div>
                     </div>
-                    <div>
-                        <p>`+ producto.description +`</p>
-                        <p><b>Precio:</b> US$ ` + producto.cost +`</p>
-                    </div>     
-                </div>
-            </div>
-        </div>
-        `
+                </a>
+                `
             }
         }
 
