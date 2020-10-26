@@ -1,5 +1,5 @@
 //Date to change
-const DATE_TARGET = new Date('10/11/2020 0:01 AM');
+const DATE_TARGET = new Date('12/12/2020 0:01 AM');
 
 // DOM for render
 const SPAN_DAYS     = document.querySelector('span#days');

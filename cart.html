@@ -163,15 +163,13 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr>
+                          <tr id="trFila0">
                               <td class="cartProductItem">
                                   <img id="img-0" alt="">
                                   <div class="cartProductItemTitle">
-                                      <h6 id="name"></h6>
-                                      
+                                      <h6 id="name"></h6>                                     
                                   </div>
                               </td>
-                              
                               <td class="cartPrice" id="costUnit"></td>
                               <td class="cartQuantity">
                                   <div class="proQty">
@@ -181,7 +179,7 @@
                                   </div>
                               </td>
                               <td class="cartTotal" id="costTotal"></td>
-                              <td class="cartClose"><span class="icon_close"></span></td>
+                              <td class="cartClose"><span class="icon_close" id="deleteArticles"></span></td>
                           </tr> 
                       </tbody>
                   </table>
@@ -205,7 +203,7 @@
                   </li>
                   <li>
                     <label>
-                      <input type="radio" class="inputRadioShipping" name="opShipping" id="opEstandar" value="5"> Estandar (12-15 dias)
+                      <input type="radio" class="inputRadioShipping" name="opShipping" id="opEstandar" value="5" checked> Estandar (12-15 dias)
                     </label>
                   </li>
                 </ul>
@@ -221,23 +219,113 @@
           <div class="col-lg-6">
               <div class="discountContent">
                   <h6>Cupon de Descuento</h6>
-                  <form action="#">
+                  <form>
                       <input type="text" placeholder="Colocar Cupon de Descuento" id="inputDiscount">
                       <button type="submit" class="site-btn" id="btnDiscount">Aplicar</button>
                   </form>
+              </div>
+              <div class="shippingInformation">
+                <h6>Informacion De Envio</h6>
+                <form id="idFormShipping" class="checkFormShipping" name="formInfo">
+                  <ul>
+                    <li class="checkFormShippingLI">
+                      <label>Pais <span class="spanCountries">*</span></label>
+                      <select name="" id="listCountries" required> 
+                        <option value="" disabled selected>--- Seleccione su Pais ---</option>
+                      </select>
+                        <!--<span class="invalid-feedback">Campo invalido.</span>-->
+                      <label>Direccion <span class="spanDir">*</span></label>
+                      <input type="text" id="idDir" minlength="10" maxlength="25" required >  
+                        <!--<span class="invalid-feedback">Campo invalido.</span>-->
+                      <label>Numero <span class="spanNum">*</span></label>
+                      <input type="text" id="idNum" name="onlyNum" minlength="8" maxlength="15" required> 
+                        <!--<span class="invalid-feedback">Campo invalido.</span>-->
+                    </li>
+                  </ul>
+                </form>
               </div>
           </div>
           <div class="col-lg-4 offset-lg-2">
               <div class="cartTotalProcced">
                   <h6>Total del Carrito</h6>
                   <ul>
-                      <li>Subtotal <span id="subTotal"> </span><span id="currencySubTotal"></span></li>
+                      <li>Subtotal <span id="subTotal"></span><span id="currencySubTotal"></span></li>
                       <li>IVA <span id="iva"></span></li>
-                      <li>Tipo de envio <span id="shippingType"></span></li>
+                      <li>Tipo de envio <span id="percenShipping"></span><span id="shippingType"></span></li>
                       <li>Descuento <span id="couponDiscount"></span></li>
-                      <li>Total <span id="totalToPay" class="spanTotal"> </span><span id="currencyTotal" class="spanTotal"></span></li>
+                      <li id="discountApplicated"><span id="beforeApplying"></span><span id="currencyDiscountApplicated"></span></li>
+                      <li>Total <span id="totalToPay" class="spanTotal"></span><span id="currencyTotal" class="spanTotal"></span></li>
                   </ul>
-                  <a href="checkout.html" class="primary-btn">Proceder a Pagar</a>
+                  <a href="#test-modal" class="primary-btn popup-modal isDisabled" id="btnBuy" >Proceder a Pagar</a>
+                        <div id="test-modal" class="white-popup-block mfp-hide">
+                          <div class="tittleModal">
+                            <h2>Checkout</h2>
+                          </div>
+                          <div id="accordion">
+                              <div class="card">
+                                <div class="card-header" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="btnAccordion1">
+                                      Tarjeta de credito
+                                    </button>
+                                  </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                  <div class="card-body">
+                                    <form id="idFormCar">
+                                      <ul>
+                                        <li class="checkFormInput">
+                                          <label>Numero de Tarjeta <span>*</span>
+                                              <i class="fab fa-cc-mastercard fa-3x paymentIcon"></i>
+                                              <i class="fab fa-cc-visa fa-3x paymentIcon"></i>
+                                              <i class="fab fa-cc-discover fa-3x paymentIcon"></i>
+                                              <i class="fab fa-cc-jcb fa-3x paymentIcon"></i>
+                                              <i class="fab fa-cc-diners-club fa-3x paymentIcon"></i>
+                                              <i class="fab fa-cc-amex fa-3x paymentIcon"></i>
+                                          </label>
+                                            <input type="text" class="cardNumber" id="cardNumber" placeholder="Numero de tarjeta" required>
+                                          <label>CVC <span>*</span></label>
+                                            <input type="text" class="cvcNumber" id="cvcNumber" placeholder="Codigo" minlength="3" maxlength="10" required>
+                                          <label>Vencimiento <span>*</span></label>
+                                            <input type="text" class="fechExpiry" id="fechExpiry" placeholder="MM/AA" required>
+                                        </li>
+                                        <li class="checkFormInput liBuy">
+                                          <button type="submit" class="site-btn isDisabled" id="btnBuyOnlyCar">Comprar</button>
+                                        </li>
+                                      </ul>    
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                  <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="btnAccordion2">
+                                      Transferencia bancaria
+                                    </button>
+                                  </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                  <div class="card-body">
+                                    <form id="idFormCarBank">
+                                      <ul class="checkFormUl">
+                                        <li class="checkFormInput">
+                                          <label>Numero de cuenta <span>*</span></label>
+                                          <input type="text" id="numBank" minlength="20" maxlength="25" placeholder="Numero de cuenta" required>
+                                        </li>
+                                        <li class="checkFormInput liBuy">
+                                            <button type="submit" class="site-btn isDisabled" id="btnAccountCar">Comprar</button>
+                                        </li>  
+                                      </ul> 
+                                    </form>                           
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="btnBuyClassDiv">
+                            <button type="submit" class="popup-modal-dismiss site-btn" id="endBuy">Volver</button>
+                          </div>
+                        </div>
               </div>
           </div>
       </div>
@@ -319,10 +407,11 @@
   <script src="js/mixitup.min.js"></script>
   <script src="js/jquery.slicknav.js"></script>
   <script src="js/dropzone.js"></script>
-  
+  <script src="js/cleave.min.js" ></script>
+  <script src="js/cleave-phone.i18n.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
-  <script src="js/functions.js"></script>
+  <!--<script src="js/functions.js"></script>-->
 </body>
 
 </html>

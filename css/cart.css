@@ -35,7 +35,7 @@
 }
 
 .shopCartTable thead {
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 1px solid #c0c0c0;
 }
 
 .shopCartTable thead th {
@@ -47,7 +47,7 @@
 }
 
 .shopCartTable tbody tr {
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 1px solid #c0c0c0;
 }
 
 .shopCartTable tbody tr td {
@@ -136,10 +136,10 @@
 .shopCartTable tbody tr .cartClose span {
 	height: 45px;
 	width: 45px;
-	background: #f2f2f2;
+	background: #c0c0c0;
 	border-radius: 50%;
 	font-size: 18px;
-	color: #111111;
+	color: white;
 	line-height: 44px;
 	text-align: center;
 	display: inline-block;
@@ -246,10 +246,58 @@
 	right: 4px;
 	top: 4px;
 }
+/****************************************************************************************/
+.shippingInformation {
+	background: #cfcfcf;
+	margin-top: 40px;
+	padding: 20px 20px 20px 30px;
+}
+.shippingInformation h6 {
+	color: #111111;
+	font-weight: 650;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	text-decoration-line: underline;
+}
+.shippingInformation .checkFormShipping ul li {
+	text-decoration: none;
+	list-style: none;
+	
+}
+.shippingInformation .checkFormShipping ul li label {
+	font-size: 16px;
+	font-weight: 500;
+	color: #444444;
+	margin-bottom: 10px;
+}
+.shippingInformation .checkFormShipping ul li span {
+	color: #ca1515;
+}
+.shippingInformation .checkFormShipping ul li .spanCountries {
+	padding-right: 134px;
+}
+.shippingInformation .checkFormShipping ul li .spanDir {
+	padding-right: 90px;
+}
+.shippingInformation .checkFormShipping ul li .spanNum {
+	padding-right: 100px;
+}
+.checkFormShipping input, select {
+	height: 50px;
+	width: 60%;
+	border: 1px solid #e1e1e1;
+	border-radius: 2px;
+	margin-bottom: 15px;
+	font-size: 13px;
+	padding-left: 20px;
+	color: #666666;
+}
 
 .cartTotalProcced {
 	background: #cfcfcf;
-	padding: 40px;
+	padding: 45px 40px 45px 40px;
 }
 
 .cartTotalProcced h6 {
@@ -291,7 +339,107 @@
 	color: white;
 }
 
+#beforeApplying, #currencyDiscountApplicated {
+	color: #525252;
+	text-decoration: line-through;
+	font-size: 15px;
+}
 
-/*******************************************/
 
+/*---------------------
+  Modal
+-----------------------*/
+.white-popup-block {
+    background: #FFF;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 650px;
+    margin: 40px auto;
+	position: relative;
+}
 
+.tittleModal h2 {
+	color: #ca1515;
+	text-align:center;
+	font-weight: 600;
+	border-bottom: 1px solid #d7d7d7;
+	margin-bottom: 20px;
+}
+
+.card-header .mb-0 button {
+	color: #111111;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.card-header .mb-0 button:hover {
+	color: #ca1515;
+	text-decoration: none;
+}
+
+.card-body .checkFormInput {
+	font-size: 14px;
+}
+
+.card-body .checkFormInput {
+	text-decoration: none;
+	list-style: none;
+	/*border-bottom: 1px solid #c0c0c0;*/
+}
+
+.card-body .checkFormInput label {
+	color: #444444;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.card-body .checkFormInput label span{
+	color: #ca1515;
+	padding-right: 90px;
+}
+
+.checkFormInput input {
+	height: 50px;
+	width: 100%;
+	border: 1px solid #e1e1e1;
+	border-radius: 2px;
+	margin-bottom: 25px;
+	font-size: 14px;
+	padding-left: 20px;
+	color: #666666;
+}
+.liBuy {
+	text-align: center !important;
+	display: block;
+}
+.liBuy button {
+	text-decoration: none;
+	width: 80%;	
+}
+.btnBuyClassDiv {
+	text-align:	right;
+	display: block;
+}
+
+.btnBuyClassDiv button {
+	margin-top: 15px;
+	letter-spacing: 1px;
+}
+
+a.isDisabled, button.isDisabled {
+	display: inline-block; 
+	pointer-events: none;
+	text-decoration: none;
+	background: #444444 !important;
+}
+
+.paymentIcon{
+	transition: all 200ms ease;
+	opacity: 0.3;
+}
+.paymentIcon.active {
+	opacity: 1 !important;
+	transform: scale(1.1,1.1);
+}

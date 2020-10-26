@@ -7,7 +7,7 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/pro
 const CART_INFO_URL             = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_INFO_URL_CHALLENGE   = "https://japdevdep.github.io/ecommerce-api/cart/654.json";
 const CART_BUY_URL              = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
-
+const COUNTRIES                 = "https://restcountries.eu/rest/v2/all";
 
 var getJSONData = function(url){
     var result = {}; 
@@ -41,7 +41,7 @@ var getJSONData = function(url){
     
     /*------------------
         Navigation
-      --------------------*/
+    --------------------*/
     $("#userMenu").slicknav({
       prependTo: '#aOffcanvasUser',
       allowParentLinks: true
@@ -110,4 +110,7 @@ var getJSONData = function(url){
     type: 'image'
   });
 
+
 })(jQuery);
+
+
