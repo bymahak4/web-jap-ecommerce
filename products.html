@@ -23,6 +23,7 @@
     <link rel="stylesheet"  href="css/elegant-icons.css"    type="text/css">
     <link rel="stylesheet"  href="css/slicknav.min.css"     type="text/css">
     <link rel="stylesheet"  href="css/styles.css"           type="text/css">
+    <link rel="stylesheet"  href="css/product.css"          type="text/css">
   </head>
 
   <body>
@@ -138,85 +139,218 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Shop Section Begin -->
-    <section class="shop spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3"></div>
-        </div>
-      </div>
-    </section>
-    <!-- Shop Section End -->
-
-
-
-
-    <!-- MAIN -->
-    <main role="main" class="pb-5">  
-      <div class="text-center p-4">
-          <h2>Listado de Productos</h2>
-      </div>
-    <div class="container">
-        <div class="row">
-            <div class="col text-right">
-                <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                    <label class="btn btn-light active" id="sortAsc" >
-                        <input type="radio" name="options" autocomplete="off" checked>A-Z
-                    </label>
-                    <label class="btn btn-light" id="sortDesc" >
-                        <input type="radio" name="options" autocomplete="off">Z-A
-                    </label>
-                    <label class="btn btn-light" id="precioAcendent"> 
-                      <input type="radio" name="options" autocomplete="off" /><i class="fas fa-sort-amount-up mr-1"></i>$
-                    </label>
-                    <label class="btn btn-light" id="precioDecendent">
-                        <input type="radio" name="options" autocomplete="off" /><i class="fas fa-sort-amount-down mr-1"></i>$
-                    </label>
-                    <label class="btn btn-light" id="sortBySoldCount" >
-                        <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>vendidos.
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-end">
-          <div class="col-md-6"></div>
-            <div class="col-md-6 col-sm-12 mb-1 container">
-              <div class="row container p-0 m-0">
-                <div class="col">
-                  <p class="font-weight-normal text-right my-2">Cant.</p>
-                </div>
-                <div class="col">
-                  <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
-                </div>
-                <div class="col">
-                  <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
-                </div>
-                <div class="col-3 p-0">
-                  <div class="btn-group" role="group">
-                    <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
-                    <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
-                  </div>
-                </div>
-              </div>
-            </div>  
-        </div>
-        <div class="divSearch">  
-          <input id="inputSearch" type="search" required/>
-          <label class="lblSearch">¿Qué deseas buscar?</label>
-        </div>
-        <div class="row">
-            <div class="list-group" id="cat-list-container">
-            </div>
-        </div>
-    </div>
-      <div></div>
+    <!-- Products Section Begin -->
+    <section class="products spad">
       <div class="container">
           <div class="row">
-              <div class="list-group" id="cat-list-container">
+              <div class="col-lg-3 col-md-3">
+                  <div class="productsSidebar">
+                    <div class="sidebarFilter">
+                      <div class="sectionTitle sectionTitleList">
+                        <h4>Listado Por Orden</h4>
+                      </div>
+                      <div class="filterRange">
+                        <div class="contentListFilter">
+                          <div class="btnContent" data-toggle="buttons">
+                            <label class="orderButton" id="sortAsc">
+                              <input type="radio" name="options" autocomplete="off" checked>A-Z
+                            </label>
+                            <label class="orderButton" id="sortDesc">
+                              <input type="radio" name="options" autocomplete="off">Z-A
+                            </label>
+                            <label class="orderButton mod" id="precioAcendent"> 
+                              <input type="radio" name="options" autocomplete="off" /><i class="fas fa-sort-amount-up mr-1"></i>$
+                            </label>
+                            <label class="orderButton" id="precioDecendent">
+                              <input type="radio" name="options" autocomplete="off" /><i class="fas fa-sort-amount-down mr-1"></i>$
+                            </label>
+                            <label class="orderButton" id="sortBySoldCount">
+                              <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>vendidos
+                            </label>
+                          </div>
+                          <div class="divSearch">  
+                            <input id="inputSearch" type="search" placeholder="¿Qué deseas buscar?" class="form-control" required/>
+                          </div>
+                          <div class="textP">
+                            <p class="productByPrice">Por Precio</p>
+                          </div>
+                          <div class="divCantFilter">
+                            <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+                          </div>
+                          <div class="divCantFilter">
+                            <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+                          </div>
+                          <div class="col-2 p-0 mt-4">
+                            <div class="btn-group" role="group">
+                              <button class="orderButton" id="rangeFilterCount">Filtrar</button>
+                              <button class="orderButton" id="clearRangeFilter">Limpiar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                    </div>
+                    <div class="sidebarCategories">
+                          <div class="sectionTitle">
+                              <h4>Categorias</h4>
+                          </div>
+                          <div class="categoriesAccordion">
+                              <div class="accordion" id="accordionExample">
+                                  <div class="card">
+                                      <div class="cardHeading">
+                                          <a data-toggle="collapse" data-target="#collapseOne">Vehículos </a>
+                                      </div>
+                                      <div id="collapseOne" class="collapse" data-parent="#accordionExample">
+                                          <div class="cardBody">
+                                              <ul>
+                                                  <li><a href="#">Ferrari</a></li>
+                                                  <li><a href="#">BMW</a></li>
+                                                  <li><a href="#">Audi</a></li>
+                                                  <li><a href="#">Mazda</a></li>
+                                                  <li><a href="#">Mercedes Benz</a></li>
+                                                  <li><a href="#">Fiat</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="card">
+                                      <div class="cardHeading">
+                                          <a data-toggle="collapse" data-target="#collapseTwo">Juguetes</a>
+                                      </div>
+                                      <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                                          <div class="cardBody">
+                                              <ul>
+                                                  <li><a href="#">Cartas</a></li>
+                                                  <li><a href="#">Puzzle</a></li>
+                                                  <li><a href="#">Lego</a></li>
+                                                  <li><a href="#">Dibujitos</a></li>
+                                                  <li><a href="#">Peluches</a></li>
+                                                  <li><a href="#">Juego de Mesa</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="card">
+                                      <div class="cardHeading">
+                                          <a data-toggle="collapse" data-target="#collapseThree">Hogar</a>
+                                      </div>
+                                      <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                                          <div class="cardBody">
+                                              <ul>
+                                                  <li><a href="#">Muebles</a></li>
+                                                  <li><a href="#">Camas</a></li>
+                                                  <li><a href="#">Pisos</a></li>
+                                                  <li><a href="#">Cortinas</a></li>
+                                                  <li><a href="#">Plantas</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="card">
+                                      <div class="cardHeading">
+                                          <a data-toggle="collapse" data-target="#collapseFour">Herramientas</a>
+                                      </div>
+                                      <div id="collapseFour" class="collapse" data-parent="#accordionExample">
+                                          <div class="cardBody">
+                                              <ul>
+                                                  <li><a href="#">kits</a></li>
+                                                  <li><a href="#">Destornilladores</a></li>
+                                                  <li><a href="#">Monte</a></li>
+                                                  <li><a href="#">Taladro</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="card">
+                                      <div class="cardHeading">
+                                          <a data-toggle="collapse" data-target="#collapseFive">Tecnologias</a>
+                                      </div>
+                                      <div id="collapseFive" class="collapse" data-parent="#accordionExample">
+                                          <div class="cardBody">
+                                              <ul>
+                                                  <li><a href="#">Computadoras</a></li>
+                                                  <li><a href="#">Notebooks</a></li>
+                                                  <li><a href="#">Cargadores</a></li>
+                                                  <li><a href="#">Celulares</a></li>
+                                                  <li><a href="#">Robots</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="cardHeading">
+                                        <a data-toggle="collapse" data-target="#collapseSix">Vestimenta</a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" data-parent="#accordionExample">
+                                        <div class="cardBody">
+                                            <ul>
+                                                <li><a href="#">Remeras</a></li>
+                                                <li><a href="#">Pantalon</a></li>
+                                                <li><a href="#">Vestidos</a></li>
+                                                <li><a href="#">Camperas</a></li>
+                                                <li><a href="#">Championes</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="cardHeading">
+                                        <a data-toggle="collapse" data-target="#collapseSeven">Lirbos</a>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse" data-parent="#accordionExample">
+                                        <div class="cardBody">
+                                            <ul>
+                                                <li><a href="#">Terror</a></li>
+                                                <li><a href="#">Amor</a></li>
+                                                <li><a href="#">Jovenes</a></li>
+                                                <li><a href="#">Enciclopedias</a></li>
+                                                <li><a href="#">Ficcion</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="cardHeading">
+                                        <a data-toggle="collapse" data-target="#collapseEight">Salud y Belleza</a>
+                                    </div>
+                                    <div id="collapseEight" class="collapse" data-parent="#accordionExample">
+                                        <div class="cardBody">
+                                            <ul>
+                                                <li><a href="#">Cremas</a></li>
+                                                <li><a href="#">Mauinas</a></li>
+                                                <li><a href="#">Shampoo</a></li>
+                                                <li><a href="#">Maquillaje</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="cardHeading">
+                                        <a data-toggle="collapse" data-target="#collapseNine">Instrumentos Musicales</a>
+                                    </div>
+                                    <div id="collapseNine" class="collapse" data-parent="#accordionExample">
+                                        <div class="cardBody">
+                                            <ul>
+                                                <li><a href="#">Guitarras</a></li>
+                                                <li><a href="#">Flautas</a></li>
+                                                <li><a href="#">Violin</a></li>
+                                                <li><a href="#">Piano</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-9 col-md-9 boxProductsContent">
+                  <div class="row" id="cat-list-container"> 
+                  </div>
               </div>
           </div>
       </div>
-    </main> 
+    </section>
+    <!-- Products Section End -->
     
      <!-- Footer Section Begin -->
      <footer class="footer">
@@ -294,7 +428,6 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
-    <script src="js/functions.js"></script>
     <script src="js/init.js"></script>
     <script src="js/products.js"></script>
   </body>

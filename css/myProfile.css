@@ -1,0 +1,79 @@
+/*---------------------
+  My Profile
+-----------------------*/
+.profile {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+.checkFormProfile h5 {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+.checkFormProfile .checkProfile p {
+    color: #444444;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.checkFormProfile .checkProfile p span {
+    color: #ca1515;
+}
+.checkFormProfile .checkProfile .pAvatar{
+    text-align: center;
+    text-decoration: none;
+    font-weight: 570;
+    font-size: 18px;
+}
+.checkFormProfile .checkProfile .boxImgProfile {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.checkFormProfile .checkProfile .inputImg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.checkFormProfile .checkProfile .inputUrlImg {
+    width: 50%;
+    
+}
+.checkFormProfile .checkProfile input {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    padding-left: 20px;
+    color: #666666;
+}
+.checkFormProfile .boxBtnSave {
+    display: flex;
+    justify-content: center;
+}
+.checkFormProfile .boxBtnSave .btnSave {
+    width: 50%;
+    display: block;
+	border-radius: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 12px 0 10px;
+    font-size: 16px;
+    color: white;
+    text-transform: none;
+}
+button.isDisabled {
+	display: inline-block; 
+	pointer-events: none;
+	text-decoration: none;
+	background: #444444 !important;
+}
+
+
+
+

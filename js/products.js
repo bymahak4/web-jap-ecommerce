@@ -81,23 +81,32 @@ function showCategoriesList(){
                 ((maxCount == undefined) || (maxCount != undefined && parseInt(producto.cost) <= maxCount))){
 
                 htmlContentToAppend += `
-                <a href="product-info.html" class="list-group-item list-group-item-action">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="` + producto.imgSrc + `" alt="` + producto.description + `" class="img-thumbnail">
-                        </div>
-                        <div class="col">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h4 class="mb-1">`+ producto.name +`</h4>
-                                <small class="text-muted"><b>` + producto.soldCount + ` Vendidos</b></small>
+                
+                    <div class="col-lg-4 col-md-6">
+                        <div class="productItem">
+                        <a href="product-info.html"> 
+                            <div class="productItemPic setBg pic" data-setbg="`+ producto.imgSrc +`" style="background-image: url(`+ producto.imgSrc +`);">
+                                <div class="label stockout stockblue">` + producto.soldCount + ` Vendidos</div> 
+                                <div class="cap">
+                                    <h3>`+ producto.name +`</h3>
+                                    <p>`+ producto.description +`</p>
+                                </div>
                             </div>
-                            <div>
-                                <p>`+ producto.description +`</p>
-                                <p><b>Precio:</b> US$ ` + producto.cost +`</p>
-                            </div>     
+                        </a> 
+                        <div class="productItemText">
+                            <h6><a href="#">`+ producto.name +`</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="productPrice">US$ ` + producto.cost +`</div>
+                            </div>
                         </div>
                     </div>
-                </a>
+                
                 `
             }
         }
@@ -141,8 +150,6 @@ document.addEventListener("DOMContentLoaded", function(e){
         sortAndShowCategories(ORDER_BY_PROD_COST_ASC);
     });
     
-/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/ 
-
     document.getElementById("precioDecendent").addEventListener("click", function(){
         sortAndShowCategories(ORDER_BY_PROD_COST_DESC);
     });

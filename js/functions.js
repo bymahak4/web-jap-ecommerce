@@ -13,9 +13,6 @@ const MILLISECONDS_OF_A_MINUTE  = MILLISECONDS_OF_A_SECOND * 60;
 const MILLISECONDS_OF_A_HOUR    = MILLISECONDS_OF_A_MINUTE * 60;
 const MILLISECONDS_OF_A_DAY     = MILLISECONDS_OF_A_HOUR * 24
 
-// Show Year
-const SPAN_YEAR = document.querySelector('span#year');
-
 
 function updateCountdown() {
 
@@ -35,17 +32,10 @@ function updateCountdown() {
 }
 
 
-function showYear() {
-    const YEAR = new Date().getFullYear();
-    SPAN_YEAR.textContent = YEAR;
-}
-
 setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 
 
-
 document.addEventListener("DOMContentLoaded", function(e){
-    showYear();
     updateCountdown();
     
 });

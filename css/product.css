@@ -1,0 +1,200 @@
+/*---------------------
+  Products
+-----------------------*/
+
+.products {
+	padding-top: 70px;
+	padding-bottom: 80px;
+}
+
+.sidebarCategories {
+	margin-bottom: 50px;
+}
+
+.sidebarCategories .sectionTitle {
+	margin-bottom: 35px;
+}
+
+.sidebarCategories .sectionTitle h4 {
+	font-size: 18px;
+}
+.categoriesAccordion .card {
+	border: none;
+	border-radius: 0;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #e1e1e1 !important;
+    margin-bottom: 12px;
+    background: #F5F5F5;
+}
+
+.categoriesAccordion .card:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	border-bottom: none !important;
+}
+
+.categoriesAccordion .cardHeading {
+	cursor: pointer;
+}
+
+.categoriesAccordion .cardHeading a {
+	font-size: 14px;
+	font-weight: 500;
+	color: #111111;
+	display: block;
+}
+
+.categoriesAccordion .cardBody {
+	padding-left: 0;
+	padding-top: 6px;
+	padding-bottom: 0;
+}
+
+.categoriesAccordion .cardBody li {
+	list-style: none;
+	position: relative;
+	padding-left: 16px;
+}
+
+.categoriesAccordion .cardBody li:before {
+	position: absolute;
+	left: 4px;
+	top: 14px;
+	height: 1px;
+	width: 4px;
+	background: #666666;
+	content: "";
+}
+
+.categoriesAccordion .cardBody li a {
+	font-size: 14px;
+	color: #666666;
+	line-height: 30px;
+}
+
+.categoriesAccordion .cardHeading a:after,
+.categoriesAccordion .cardHeading > a.active[aria-expanded=false]:after {
+	content: "\f150";
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	color: #ca1515;
+	position: absolute;
+	right: 30px;
+	top: 0px;
+}
+
+.categoriesAccordion .cardHeading.active a:after {
+	content: "\f151";
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	color: #ca1515;
+	position: absolute;
+	right: 30px;
+	top: -1px;
+}
+
+.categoriesAccordion .cardHeading a[aria-expanded=true]:after,
+.categoriesAccordion .cardHeading > a.active:after {
+	content: "\f151";
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	color: #ca1515;
+	position: absolute;
+	right: 30px;
+	top: -1px;
+}
+
+.sidebarFilter {
+	position: relative;
+	margin-bottom: 60px;
+}
+
+.sidebarFilter .sectionTitle {
+	margin-bottom: 35px;
+}
+
+.sidebarFilter .sectionTitle h4 {
+	font-size: 18px;
+}
+.sidebarFilter .contentListFilter .btnContent {
+	margin-bottom: 25px;
+}
+.sidebarFilter .orderButton{
+	font-size: 14px;
+	color: #0d0d0d;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+	display: inline-block;
+	padding: 5px 16px 5px 24px;
+	border: 2px solid #ff0000;
+	background: #ececec;
+	/*position: relative;*/
+	right: 0;
+	bottom: -5px;
+	border-radius: 2px;
+}
+
+.sidebarFilter input[type='radio'] {
+	-webkit-appearance: none;
+}
+.sidebarFilter .filterRange .contentListFilter .btnContent .mod{
+	padding-right: 21px;
+}
+.contentListFilter .divSearch, .contentListFilter .divCantFilter {
+	width: 91%;
+}
+.contentListFilter .divSearch {
+	margin-bottom: 30px;
+}
+.contentListFilter .divCantFilter {
+	margin-bottom: 10px;
+}
+.contentListFilter .textP {
+	margin-top: 5px;
+	border-top: 1px solid #e1e1e1;
+	text-align: center;
+}
+.contentListFilter .textP p {
+	font-size: 18px;
+	font-family: 'Montserrat Alternates', sans-serif;
+	color: #111111;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.productItemPic .cap{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(61, 61, 61, 0.7);
+	transition: all 500ms ease-out;
+	opacity: 0;
+	visibility: hidden;
+   text-align: center;
+}
+.productItemPic:hover > .cap {
+	opacity: 1;
+	visibility: visible;
+}
+.productItemPic:hover > .cap h3 {
+	margin-top: 70px;
+    margin-bottom: 15px;
+}
+.productItemPic .cap h3{
+	color: #fff;
+	font-weight: 400;
+	margin-bottom: 120px;
+	transition: all 500ms ease-out;
+	margin-top: 30px;
+}
+.productItemPic .cap p{
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.5;
+	width: 100%;
+	max-width: 220px;
+	margin: auto;
+}
+

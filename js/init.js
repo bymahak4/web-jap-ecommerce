@@ -8,6 +8,8 @@ const CART_INFO_URL             = "https://japdevdep.github.io/ecommerce-api/car
 const CART_INFO_URL_CHALLENGE   = "https://japdevdep.github.io/ecommerce-api/cart/654.json";
 const CART_BUY_URL              = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 const COUNTRIES                 = "https://restcountries.eu/rest/v2/all";
+const SPAN_YEAR                 = document.querySelector('span#year');
+
 
 var getJSONData = function(url){
     var result = {}; 
@@ -31,6 +33,10 @@ var getJSONData = function(url){
     });
 }
 
+function showYear() {
+  const YEAR = new Date().getFullYear();
+  SPAN_YEAR.textContent = YEAR;
+}
 
   document.addEventListener("DOMContentLoaded", function(e){
     
@@ -47,6 +53,7 @@ var getJSONData = function(url){
       allowParentLinks: true
     });
    
+    showYear();
 });
 
 
