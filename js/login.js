@@ -10,7 +10,7 @@ function onSignIn(googleUser) {
     localStorage.setItem('lastName',profile.getFamilyName());
     localStorage.setItem('birthdate', empty);
     localStorage.setItem('tel', empty);
-    //localStorage.setItem('img', profile.getImageUrl());
+    localStorage.setItem('img', profile.getImageUrl());
 
     window.location.href = "home.html"; 
           
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         localStorage.setItem('lastName', empty);
         localStorage.setItem('birthdate', empty);
         localStorage.setItem('tel', empty);
-        //localStorage.setItem('img', img);
+        localStorage.setItem('img', img);
         
         window.location.href = "home.html";
     })

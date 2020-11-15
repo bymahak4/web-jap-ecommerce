@@ -1,0 +1,25 @@
+section .container h2 {
+    font-weight: 600;
+}
+dl dt {
+    font-family: "Montserrat", sans-serif;
+    color: #ca1515;
+    font-weight: 600;
+}
+section .container a {
+    background-color: #ca1515 !important;
+    color: white !important;
+}
+section .container a:hover, section .container a::after{
+    background: #ca1515 !important;
+    background-color: #ca1515 !important;
+    color: white !important;
+}  
+.boxcolimg .boximg img {
+    height: 90%;
+    width: 100%;
+}
+.img-thumbnail:hover {
+    transform: scale(1.3);
+    transition: .6s;
+}

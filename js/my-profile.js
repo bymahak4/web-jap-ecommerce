@@ -1,25 +1,20 @@
 function showMyProfileData() {
     if (localStorage.getItem('Name') != null || localStorage.getItem('Name') != undefined) {
-        if (localStorage.getItem("Email") != null || localStorage.getItem("Email") != undefined) {
-            $('#showUser').val(localStorage.getItem("Name"));
-            $('#showEmail').val(localStorage.getItem("Email"));
-            $('#showName').val(localStorage.getItem("User"));
-            $('#showLastName').val(localStorage.getItem("lastName"));
-            //$('#showImg').src(localStorage.getImageUrl("img");
-        }else {
-            $('#showUser').val(localStorage.getItem("Name"));
-            $('#showEmail').val(localStorage.getItem("Email"));
-            $('#showName').val(localStorage.getItem("User"));
-            $('#showLastName').val(localStorage.getItem("lastName"));
-            if (localStorage.getItem("img") != "" || localStorage.getItem("img") != null) {
-                $('#idUrlImg').val(localStorage.getItem("img"));
-                $('#showImg').attr("src", (localStorage.getItem("img")));
-                
-            }
-            
-        }
+        var img = "./img/myProfile/default_avatar.png";
+
+        $('#showUser').val(localStorage.getItem("Name"));
+        $('#showEmail').val(localStorage.getItem("Email"));
+        $('#showName').val(localStorage.getItem("User"));
+        $('#showLastName').val(localStorage.getItem("lastName"));
+        $('#showImg').attr('src', localStorage.getItem("img"));
+        //$('#idShowUrl').attr('placeholder', localStorage.getItem("img"));
+        $('#idShowUrl').val(localStorage.getItem("img"))
         $('#showBirthdate').val(localStorage.getItem("birthdate"));
         $('#showTel').val(localStorage.getItem("tel")); 
+        
+        if (localStorage.getItem("img") == img) {
+            $('#deleteImg').hide();
+        };
     }
 }
 function showSaveProfileData() {
@@ -30,7 +25,7 @@ function showSaveProfileData() {
     localStorage.setItem("lastName", $('#showLastName').val());
     localStorage.setItem("birthdate", $('#showBirthdate').val());
     localStorage.setItem("tel", $('#showTel').val()); 
-    //localStorage.setItem("img", $('#showImg'));
+    localStorage.setItem("img", $('#idShowUrl').val());
     
 }
 function dateFormatting() {
@@ -40,29 +35,45 @@ function dateFormatting() {
         datePattern: ['Y', 'm', 'd']
     });
 }
-
 function validationOnlyNumers(e) {
     var key = window.event ? e.which : e.keyCode;
     if (key < 48 || key > 57) {
         e.preventDefault();
     }
 }
-window.addEventListener("load", function() {
-    formProfile.onlyNum.addEventListener("keypress", validationOnlyNumers, false);
-});
-
-
+function delAvatarDeafault() {
+    localStorage.setItem("img", './img/myProfile/default_avatar.png');
+}
+ 
 document.addEventListener("DOMContentLoaded", function (e) {
     
     
     if(localStorage.getItem("Name")) {
         showMyProfileData();
         dateFormatting();
-        //uploadIMG();
-
+        
+        formProfile.onlyNum.addEventListener("keypress", validationOnlyNumers, false);
+        
+        var showImg = document.getElementById('showImg');
+        showImg.onerror = function () {
+            this.src = "./img/myProfile/default_avatar.png";
+        };
         document.getElementById('btnProfileSave').addEventListener('click', function() {
+            
+            if ($('#idShowUrl').val() == "" || $('#idShowUrl').val() == " " || $('#idShowUrl').val() == null || $('#idShowUrl').val() == undefined) {
+                localStorage.setItem("img", './img/myProfile/default_avatar.png');
+                
+                //window.alert("jose");
+            }
             showSaveProfileData();
         });
+        
+        
+        document.getElementById('deleteImg').addEventListener('click', function(){
+            delAvatarDeafault();
+            showMyProfileData();
+        });
+        
         /*(function ($) {
             $(window).on('load', function () {
                 let formProfile = document.getElementById('idformProfile');
@@ -84,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             });
         })(jQuery);*/
         
-    }
+    }  
+
     
 });

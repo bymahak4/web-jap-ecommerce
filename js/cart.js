@@ -1,7 +1,9 @@
 articlesArray = [];
 var cardType = null;
 
-
+function iconChange() {
+    $('#changeMoneySpan').removeClass("icon_search").addClass("fas fa-hand-holding-usd");
+}
 function disableDiscountCoupon(){
    
     document.getElementById('inputDiscount').value="";
@@ -204,9 +206,6 @@ function checkCardPaymentMethod() {
         $('#cardNumber').attr('pattern', '[0-9-]{30}');
     };
 }
-function checkedFech() {
-    
-}
 function validatioModal() {
     $('#cardNumber').on('change keyup',function(e){
         checkCardPaymentMethod();
@@ -247,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
 
     if(localStorage.getItem("Name")){ 
-        
+        iconChange();
         discount();  
         detectedSelectedCard();
         validatioModal();
@@ -299,6 +298,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         });       
         document.getElementById('btnAccordion1').addEventListener('click', function(){
             $('#numBank').val("");
+            $('#btnAccountCar').addClass("isDisabled");
             //$('#cardNumber').empty();
         });
         document.getElementById('btnAccordion2').addEventListener('click', function(){
@@ -308,11 +308,14 @@ document.addEventListener("DOMContentLoaded", function(e){
             //$('#cvcNumber').empty();
             $('#fechExpiry').val("");
             //$('#fechExpiry').empty();
+            $('#btnBuyOnlyCar').addClass("isDisabled");
         });
         
 
         (function ($) {
         $(window).on('load', function () {
+            
+            
             /*------------------
               Magnific Modal
             --------------------*/

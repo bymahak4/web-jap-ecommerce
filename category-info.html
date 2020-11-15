@@ -2,93 +2,111 @@
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>categoría-Info</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/navMenu.css">
-</head>
+    <!-- Web Icon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+       
+    <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"            rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap"       rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"  rel="stylesheet">
 
-<body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <div class="divLogo py-2 d-none d-md-inline-block">e-Mercado</div>
-      <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a id="userMenu" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" ></a>
-          <div id="profileUser" class="dropdown-menu">
-            <a class="dropdown-item" id="verCarrito" href="cart.html">Mi carrito</a>
-            <a class="dropdown-item" id="profileUser" href="my-profile.html">Mis Datos</a>
-            <a class="dropdown-item" id="logOutUser" href="logOut.html">Salir</a>
+    <!-- CSS Style --> 
+    <link rel="stylesheet"  href="css/bootstrap.min.css"    type="text/css">
+    <link rel="stylesheet"  href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet"  href="css/magnific-popup.css"   type="text/css">
+    <link rel="stylesheet"  href="css/elegant-icons.css"    type="text/css">
+    <link rel="stylesheet"  href="css/slicknav.min.css"     type="text/css">
+    <link rel="stylesheet"  href="css/styles.css"           type="text/css">
+    <link rel="stylesheet"  href="css/categoriesInfo.css"   type="text/css">
+
+  </head>
+
+  <body>
+    
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvasMenuOverlay"></div>
+    <div class="offcanvasMenuWrapper" id="idShowOffCanvas"></div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Navegation Section Begin -->
+    <header class="header" id="idShowNavegation"></header>
+    <!-- Navegation Section End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumbOption">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="breadcrumbLinks">
+                      <a href="home.html"><i class="fa fa-home"></i> Home</a>
+                      <a href="categories.html"> Categorias</a>
+                      <span>Categoria-Info</span>
+                  </div>
+              </div>
           </div>
-    </div>
-  </nav>
-  
-  <main role="main">
-    <div class="container mt-5">
-      <div class="text-center p-4">
-        <h2>Descripción de la categoría</h2>
-        <p class="lead">Encontrarás aquí toda la información de la categoría seleccionada.</p>
-        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
-          seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
       </div>
-      <h3 id="categoryName"></h3>
-      <hr class="my-3">
-      <dl>
-        <dt>Descripción</dt>
-        <dd>
-          <p id="categoryDescription"></p>
-        </dd>
-
-        <dt>Cantidad de productos en la categoría</dt>
-        <dd>
-          <p id="productCount"></p>
-        </dd>
-
-        <dt>Criterio para incluir productos en esta categoría</dt>
-        <dd>
-          <p id="productCriteria"></p>
-        </dd>
-
-        <dt>Imágenes ilustrativas</dt>
-        <dd>
-          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
-          </div>
-        </dd>
-      </dl>
-      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>
-  </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/category-info.js"></script>
-</body>
+    <!-- Breadcrumb End -->
+
+    <!-- Section Begin -->
+    <section role="main">
+      <div class="container mt-5">
+        <!--<div class="text-center p-4">
+          <h2>Descripción de la categoría</h2>
+          <p class="lead">Encontrarás aquí toda la información de la categoría seleccionada.</p>
+          <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
+            seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
+        </div>-->
+        <h2 id="categoryName"></h2>
+        <hr class="my-3">
+        <dl>
+          <dt>Descripción</dt>
+          <dd>
+            <p id="categoryDescription"></p>
+          </dd>
+
+          <dt>Cantidad de productos en la categoría</dt>
+          <dd>
+            <p id="productCount"></p>
+          </dd>
+
+          <dt>Criterio para incluir productos en esta categoría</dt>
+          <dd>
+            <p id="productCriteria"></p>
+          </dd>
+
+          <dt>Imágenes ilustrativas</dt>
+          <dd>
+            <div class="row text-center text-lg-left pt-2 mb-5" id="productImagesGallery">
+            </div>
+          </dd>
+        </dl>
+        <a type="button" class="btn btn-lg btn-block site-btn" href="products.html">Ver productos</a>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer" id="idShowFooter"></footer>
+    <!-- Footer Section End -->    
+
+
+
+    <!-- JS Plugins -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/showNavegation.js"></script>
+    <script src="js/showFooter.js"></script>
+    <script src="js/category-info.js"></script>
+  </body>
 
 </html>

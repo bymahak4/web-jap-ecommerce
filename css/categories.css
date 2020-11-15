@@ -1,0 +1,32 @@
+.sidebarFilter {
+    border-bottom: 1px solid #e1e1e1;
+}
+.btnContent .divAscDesc {
+    display: flex;
+    justify-content: left;
+}
+.btnContent .divAscDesc label {
+    width: 44%;
+    margin-right: 7px;
+    text-align: center;
+}
+.btnContent .divArticles {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+.btnContent .divArticles label {
+    width: 91%;
+    text-align: center;
+}
+.text-muted {
+    color: #0066bd !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+.catname {
+    border-bottom: 2px solid #ca1515;
+}
+.listcat:hover{
+    background: rgba(37, 37, 37, 0.2);
+}

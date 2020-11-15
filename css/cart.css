@@ -5,7 +5,9 @@
     padding-bottom: 25px;
     padding-top: 5px;
 }
-
+.showChangeMoneySpan {
+	visibility: visible;
+}
 .headerRight .headerRightWidget .currencyBox {
 	font-size: 13px;
 	display: inline-block;

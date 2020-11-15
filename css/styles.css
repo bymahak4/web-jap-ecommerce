@@ -335,7 +335,9 @@ a.custom-card:hover {
 	-ms-transform: scale(0);
 	transform: scale(0);
 }
-
+.img-thumbnail {
+    border: 1px solid #F5F5F5;
+}
 /*---------------------
   HEADER RIGHT
 -----------------------*/
@@ -437,6 +439,11 @@ a.custom-card:hover {
 	border-radius: 50%;
 }
 
+.headerRightAuth ul .logOut {
+	padding-top: 4%;
+	border-top: 1px solid #e1e1e1;
+}
+
 /*---------------------
   HEADER RIGHT WIDGET
 -----------------------*/
@@ -478,6 +485,9 @@ a.custom-card:hover {
 	border-radius: 50%;
 }
 
+.showChangeMoneySpan {
+	visibility: hidden;
+}
 /*---------------------
   OPEN CANVAS
 -----------------------*/

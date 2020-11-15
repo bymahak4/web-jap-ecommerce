@@ -14,9 +14,9 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
        
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&display=swap"       rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"  rel="stylesheet">
 
     <!-- CSS Style --> 
     <link rel="stylesheet"  href="css/bootstrap.min.css"    type="text/css">
@@ -36,100 +36,15 @@
     </div>
     <!-- Page Preloder End -->
     
-
     <!-- Offcanvas Menu Begin -->
     <div class="offcanvasMenuOverlay"></div>
-    <div class="offcanvasMenuWrapper">
-      <div class="offcanvasClose">+</div>
-      <ul class="offcanvasWidget">
-        <li><span class="icon_search searchSwitch"></span></li>
-        <li><a href=""><span class="icon_heart_alt"></span>
-          <div class="tip">2</div>
-        </a></li>
-        <li><a><span class="far fa-bell"></span>
-          <div class="tip">1</div>
-        </a></li>
-      </ul>
-      <div class="offcanvasLogo">
-        <a href="home.html"><img src="img/logo__small.png" alt=""></a>
-      </div>
-      <div id="mobileMenuWrap"></div>
-      <div class="offcanvasUser">
-        <a href="my-profile.html" id="aOffcanvasUser"></a>
-      </div>
-    </div>
+    <div class="offcanvasMenuWrapper" id="idShowOffCanvas"></div>
     <!-- Offcanvas Menu End -->
 
-
     <!-- Navegation Section Begin -->
-    <header class="header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-3 col-lg-2">
-            <div class="headerLogo">
-              <a href="home.html"><img src="img/logo__small.png" alt=""></a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-7">
-            <nav class="headerMenu">
-              <ul>
-                <li class="active"><a href="home.html">Home</a></li>
-                <li><a href="categories.html"         >Categorias</a>
-                  <ul class="dropdown">
-                    <li><a href="">Vehículos</a></li>
-                    <li><a href="">Juguetes</a></li>
-                    <li><a href="">Hogar</a></li>
-                    <li><a href="">Herramientas</a></li>
-                    <li><a href="">Tecnologias</a></li>
-                    <li><a href="">Vestimenta</a></li>
-                    <li><a href="">Libros</a></li>
-                    <li><a href="">Salud y Belleza</a></li>
-                    <li><a href="">Instrumentos Musicales</a></li>
-                  </ul>
-                </li>
-                <li><a href="products.html"           >Productos</a></li>
-                <li><a href="sell.html"               >Vender</a></li>
-                <li><a href="contact.html"            >Nosotros</a></li>
-                <!--<li><a href=""                     >Ayuda</a></li>-->
-              </ul>
-            </nav>
-          </div>
-          <div class="col-lg-3">
-            <div class="headerRight">
-              <div class="headerRightAuth">
-                <ul>
-                  <li><span class="icon_profile"> </span><a href="#" id="userMenu"></a>
-                    <ul class="dropdown">
-                      <li><a href="cart.html"><span class="icon_bag"></span> Mi carrito
-                        <div class="tip">2</div>
-                      </a></li>
-                      <li><a href="my-profile.html"><span class="icon_profile"></span> Mis Datos</a></li>
-                      <li><a href="historyProduct.html"><span class="icon_document"></span> Historial</a></li>
-                      <!--<hr style="width: 95%;">-->
-                      <li><a href="logOut.html"><span class="icon_mug"></span> Salir</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <ul class="headerRightWidget">
-                <li><span class="icon_search searchSwitch"></span></li>
-                <li><a href="#" alt="favoritos">
-                  <span class="icon_heart_alt"></span>
-                  <div class="tip">1</div>
-                </a></li>
-                <li><span class="far fa-bell"></span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="canvasOpen">
-          <span class="arrow_carrot-left"></span>
-        </div>
-      </div>
-    </header>
+    <header class="header" id="idShowNavegation"></header>
     <!-- Navegation Section End -->
 
-    
     <!-- Categories Section Begin -->
     <div class="categories">
       <div class="container-fluid">
@@ -189,7 +104,7 @@
     </div>
     <!-- Categories Section End -->
 
-    <!-- Podructs Random/Treding Top/Sale/New Section Begin -->
+    <!-- Products Random/Treding Top/Sale/New Section Begin -->
     <section class="product spad">
       <div class="container">
         <div class="row">
@@ -392,19 +307,19 @@
         </div>
       </div>
     </section>
-    <!-- Podructs Random/Treding Top/Sale/New Section End -->
+    <!-- Products Random/Treding Top/Sale/New Section End -->
     
     <!-- Banner Section Begin -->
     <section class="banner setBg" data-setbg="img/banner/banner_jap.png">
-      <div class="container">
-          <div class="row">
-              <div class="col-xl-7 col-lg-8 m-auto" >
-                  <div class="bannerJap">   
-                    <div class="bannerItem">
-                          <div class="bannerText">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-8 m-auto" >
+                    <div class="bannerJap">   
+                        <div class="bannerItem">
+                            <div class="bannerText">
                                 <span>Esta web es una herramienta generada para fines estrictamente educativos.
-                                  <br>No realiza compras o ventas reales de terceros. Tampoco administra datos personales o de clientes.
-                                  <br>Todo lo expresado en este dominio no tiene validez comercial.
+                                    <br>No realiza compras o ventas reales de terceros. Tampoco administra datos personales o de clientes.
+                                    <br>Todo lo expresado en este dominio no tiene validez comercial.
                                 </span>                  
                           </div>
                       </div> 
@@ -412,227 +327,109 @@
               </div>
           </div>
       </div>
-  </section>
-  <!-- Banner Section End -->
+    </section>
+    <!-- Banner Section End -->
 
-  <!-- Discount Section Begin -->
+    <!-- Discount Section Begin -->
     <section class="discount">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-6 p-0">
-                  <div class="discountPic">
-                      <img src="img/discount/discount_2.jpg" alt="">
-                  </div>
-              </div>
-              <div class="col-lg-6 p-0">
-                  <div class="discountText">
-                      <div class="discountTextTitle">
-                          <span>Discount</span>
-                          <h2>Summer 2020</h2>
-                          <h5><span>Sale</span> 50%</h5>
-                      </div>
-                      <div class="discountCountdown">
-                          <div class="countdownItem">
-                              <span id="days"></span>
-                              <p>Dias</p>
-                          </div>
-                          <div class="countdownItem">
-                              <span id="hours"></span>
-                              <p>Horas</p>
-                          </div>
-                          <div class="countdownItem">
-                              <span id="minutes"></span>
-                              <p>Min</p>
-                          </div>
-                          <div class="countdownItem">
-                              <span id="seconds"></span>
-                              <p>Sec</p>
-                          </div>
-                      </div>
-                      <a href="#">Entrar</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- Discount Section End -->
-
-
-  <!-- Services Section Begin -->
-  <section class="services spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="servicesItem">
-                    <i class="fa fa-car"></i>
-                    <h6>Envio Gratis</h6>
-                    <p>Por solo $99 /año</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="discountPic">
+                        <img src="img/discount/discount_2.jpg" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="servicesItem">
-                    <i class="far fa-money-bill-alt"></i>
-                    <h6>Garantia de Reembolso</h6>
-                    <p>Reembolso por daños</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="servicesItem">
-                    <i class="far fa-life-ring"></i>
-                    <h6>Soporte Online 24/7</h6>
-                    <p>Dedicados a ayudarte</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="servicesItem">
-                    <i class="fa fa-headphones"></i>
-                    <h6>Pagos Seguros</h6>
-                    <p>Pagos seguros 100%</p>
+                <div class="col-lg-6 p-0">
+                    <div class="discountText">
+                        <div class="discountTextTitle">
+                            <span>Discount</span>
+                            <h2>Summer 2020</h2>
+                            <h5><span>Sale</span> 50%</h5>
+                        </div>
+                        <div class="discountCountdown">
+                            <div class="countdownItem">
+                                <span id="days"></span>
+                                <p>Dias</p>
+                            </div>
+                            <div class="countdownItem">
+                                <span id="hours"></span>
+                                <p>Horas</p>
+                            </div>
+                            <div class="countdownItem">
+                                <span id="minutes"></span>
+                                <p>Min</p>
+                            </div>
+                            <div class="countdownItem">
+                                <span id="seconds"></span>
+                                <p>Sec</p>
+                            </div>
+                        </div>
+                        <a href="#">Entrar</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  </section>
-  <!-- Services Section End -->
+    </section>
+    <!-- Discount Section End -->
 
-  <!-- Instagram Section Begin -->
-    <div class="instagram">
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                  <div class="instagramItem setBg" data-setbg="img/instagram/ig_4.jpg">
-                      <div class="instagramText">
-                          <i class="fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/p/CFnMGRiDP2J/" target="_blank">@ emercadojap</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                  <div class="instagramItem setBg" data-setbg="img/instagram/ig_3.jpg">
-                      <div class="instagramText">
-                          <i class="fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/p/CFnMHzLjH4g/" target="_blank">@ emercadojap</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                  <div class="instagramItem setBg" data-setbg="img/instagram/ig_9.jpg">
-                      <div class="instagramText">
-                          <i class="fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/p/CFnL5qYjI8d/" target="_blank">@ emercadojap</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                  <div class="instagramItem setBg" data-setbg="img/instagram/ig_13.jpg">
-                      <div class="instagramText">
-                          <i class="fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/p/CFnMEW7DLZx/" target="_blank">@ emercadojap</a>
-                      </div>
-                  </div>
-              </div>
-              
-              <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                  <div class="instagramItem setBg" data-setbg="img/instagram/ig_10.jpg">
-                      <div class="instagramText">
-                          <i class="fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/p/CFnL-kBD-Wj/" target="_blank">@ emercadojap</a>
-                      </div>
-                  </div>
-              </div>
-             
-              <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-                  <div class="instagramItem setBg" data-setbg="img/instagram/ig_8.jpg">
-                      <div class="instagramText">
-                          <i class="fab fa-instagram"></i>
-                          <a href="https://www.instagram.com/p/CFnMC9gjmlJ/" target="_blank">@ emercadojap</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
+    <!-- Services Section Begin -->
+    <section class="services spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="servicesItem">
+                        <i class="fa fa-car"></i>
+                        <h6>Envio Gratis</h6>
+                        <p>Por solo $99 /año</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="servicesItem">
+                        <i class="far fa-money-bill-alt"></i>
+                        <h6>Garantia de Reembolso</h6>
+                        <p>Reembolso por daños</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="servicesItem">
+                        <i class="far fa-life-ring"></i>
+                        <h6>Soporte Online 24/7</h6>
+                        <p>Dedicados a ayudarte</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="servicesItem">
+                        <i class="fa fa-headphones"></i>
+                        <h6>Pagos Seguros</h6>
+                        <p>Pagos seguros 100%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Instagram Section Begin -->
+    <div class="instagram" id="idShowInstagram"></div>
     <!-- Instagram Section End -->
-
-
+    
     <!-- Footer Section Begin -->
-    <footer class="footer">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-7">
-                  <div class="footerAbout">
-                      <div class="footerLogo">
-                          <a href="home.html"><img src="img/logo__small.png" alt=""></a>
-                      </div>
-                      <p>Somos la empresa lider en compras online con buena reputacion a nivel nacional. 
-                            e-Mercado cuenta con los certificados verificados para garantizar 
-                            la seguridad de la compra.</p>
-                      <div class="footerPayment">
-                        <a><img src="img/methodPayments/cards.png" alt=""></a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-3 col-sm-5">
-                  <div class="footerWidget">
-                      <h6>Informacion</h6>
-                      <ul>
-                          <li><a href="contact.html">Nosotros</a></li>
-                          <li><a href="blog.html">Blog</a></li>
-                          <li><a href="contact.html#contact">Contacto</a></li>
-                          <li><a href="helpFAQ.html">FAQ</a></li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-3 col-sm-4">
-                  <div class="footerWidget">
-                      <h6>Cuenta</h6>
-                      <ul>
-                          <li><a href="my-profile.html">Mi Cuenta</a></li>
-                          <li><a href="ordersTracking.html">Seguimiento</a></li>
-                          <li><a href="cart.html">Mi Carrito</a></li>
-                          <li><a href="followProducts.html">Favoritos</a></li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-8 col-sm-8">
-                  <div class="footerNewsLatter">
-                      <h6>Regístrate a nuestro Newsletter</h6>
-                      <form action="#">
-                          <input type="text" placeholder="Email">
-                          <button type="submit" class="site-btn">Subscribe</button>
-                      </form>
-                      <div class="footerSocial">
-                          <a href="https://www.facebook.com/E-Mercado_JaP-108587171003909/?modal=admin_todo_tour"><i class="fab fa-facebook-f"></i></a>
-                          <a href="https://twitter.com/eMercadoJaP1"><i class="fab fa-twitter"></i></a>
-                          <a href="https://www.youtube.com/channel/UCdZk8pVmlpY9-Wp2Yan3PXQ?view_as=subscriber"><i class="fab fa-youtube"></i></a>
-                          <a href="https://www.instagram.com/emercadojap/"><i class="fab fa-instagram"></i></a>
-                          <a href="https://www.pinterest.com/emercadojap/_saved/"><i class="fab fa-pinterest"></i></a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="footerCopyrightText">
-                    <p>Este sitio forma parte de Desarrollo Web - JAP 2020 | Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-                    <p>Copyright &copy; <span id="year"></span> Todos los derechos reservados | Jovenes A Programar</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </footer>
+    <footer class="footer" id="idShowFooter"></footer>
     <!-- Footer Section End -->
+  
     
   
-
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/mixitup.min.js"></script>
-  <script src="js/jquery.slicknav.js"></script>
-  <script src="js/functions.js"></script>
-  <script src="js/init.js"></script>
+    <!-- JS Plugins -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/showNavegation.js"></script>
+    <script src="js/showInstagram.js"></script>
+    <script src="js/showFooter.js"></script>
   </body>
 
 </html>

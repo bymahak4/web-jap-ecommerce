@@ -172,7 +172,7 @@
 	transition: all 500ms ease-out;
 	opacity: 0;
 	visibility: hidden;
-   text-align: center;
+   	text-align: center;
 }
 .productItemPic:hover > .cap {
 	opacity: 1;

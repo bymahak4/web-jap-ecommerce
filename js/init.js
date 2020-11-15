@@ -8,7 +8,6 @@ const CART_INFO_URL             = "https://japdevdep.github.io/ecommerce-api/car
 const CART_INFO_URL_CHALLENGE   = "https://japdevdep.github.io/ecommerce-api/cart/654.json";
 const CART_BUY_URL              = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 const COUNTRIES                 = "https://restcountries.eu/rest/v2/all";
-const SPAN_YEAR                 = document.querySelector('span#year');
 
 
 var getJSONData = function(url){
@@ -33,27 +32,9 @@ var getJSONData = function(url){
     });
 }
 
-function showYear() {
-  const YEAR = new Date().getFullYear();
-  SPAN_YEAR.textContent = YEAR;
-}
 
-  document.addEventListener("DOMContentLoaded", function(e){
-    
-    var userGetName   = localStorage.getItem("Name");
-    var userInfoA     = document.getElementById("userMenu");
+document.addEventListener("DOMContentLoaded", function(e){
 
-    userInfoA.innerHTML += userGetName;
-    
-    /*------------------
-        Navigation
-    --------------------*/
-    $("#userMenu").slicknav({
-      prependTo: '#aOffcanvasUser',
-      allowParentLinks: true
-    });
-   
-    showYear();
 });
 
 
@@ -79,43 +60,48 @@ function showYear() {
       var mixer = mixitup(containerEl);
     }
 
-  });
-  
-  /*------------------
-      Background Set
-  --------------------*/
-  $('.setBg').each(function () {
-    var bg = $(this).data('setbg');
-    $(this).css('background-image', 'url(' + bg + ')');
-  });
-  
-  /*------------------
-      Canvas Menu
-  --------------------*/
-  $(".canvasOpen").on('click', function () {
-    $(".offcanvasMenuWrapper").addClass("active");
-    $(".offcanvasMenuOverlay").addClass("active");
-  });
+    /*------------------
+        Background Set
+    --------------------*/
+    $('.setBg').each(function () {
+      var bg = $(this).data('setbg');
+      $(this).css('background-image', 'url(' + bg + ')');
+    });
 
-  $(".offcanvasMenuOverlay, .offcanvasClose").on('click', function () {
-      $(".offcanvasMenuWrapper").removeClass("active");
-      $(".offcanvasMenuOverlay").removeClass("active");
+    /*------------------
+        Canvas Menu
+    --------------------*/
+    $(".canvasOpen").on('click', function () {
+      $(".offcanvasMenuWrapper").addClass("active");
+      $(".offcanvasMenuOverlay").addClass("active");
+    });
+
+    $(".offcanvasMenuOverlay, .offcanvasClose").on('click', function () {
+        $(".offcanvasMenuWrapper").removeClass("active");
+        $(".offcanvasMenuOverlay").removeClass("active");
+    });
+    
+    /*------------------
+        Navigation
+    --------------------*/
+    $(".headerMenu").slicknav({
+      prependTo: '#mobileMenuWrap',
+      allowParentLinks: true
+    });
+    
+    
+
+    
   });
   
-  /*------------------
-      Navigation
-  --------------------*/
-  $(".headerMenu").slicknav({
-    prependTo: '#mobileMenuWrap',
-    allowParentLinks: true
-  });
+
+    /*------------------
+        Magnific
+    --------------------*/
+    $('.imagePopup').magnificPopup({
+      type: 'image'
+    });
   
-  /*------------------
-      Magnific
-  --------------------*/
-  $('.imagePopup').magnificPopup({
-    type: 'image'
-  });
 
 
 })(jQuery);

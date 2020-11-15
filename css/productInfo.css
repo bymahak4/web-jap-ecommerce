@@ -1,56 +1,303 @@
-h1 {
-  justify-content: center;
-  font-family: 'Righteous', cursive;
-}
 
-.descripcionProdcuto {
-  height: 100%;
-  width: 100%;
-  border: 2px solid black;
-}
-.carousel {
-    min-height: 400px;
-}
-.carousel .carousel-item {
-    display:        flex;
-    flex-direction: column;
-    user-select:    none;
-    height:         400px;
-    width:          400px;
-}
-.carousel .carousel-item img {
-    width:      100%;
-    height:     100%;
-    object-fit: cover;
-    position:   absolute;
-    top:        0;
-    left:       0;
-    border-radius: 15px;
-}
 
+
+
+/*---------------------
+  Product Details
+-----------------------*/
+
+.productDetails {
+	padding-top: 70px;
+	padding-bottom: 50px;
+}
+.productDetailsPic {
+	overflow: hidden;
+}
+.productDetailsPicLeft {
+	width: 22%;
+	max-height: 574px;
+	float: left;
+	overflow-y: auto;
+}
+.productDetailsPicLeft .pt {
+	display: block;
+	margin-bottom: 20px;
+	cursor: pointer;
+	position: relative;
+}
+.productDetailsPicLeft .pt::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.productDetailsPicLeft .pt.active::after {
+	opacity: 0.3;
+}
+.productDetailsPicLeft .pt:last-child {
+	margin-bottom: 0;
+}
+.productDetailsPicLeft .pt img {
+	min-width: 100%;
+}
+.productDetailsPicSlider {
+	top: 111px;
+}
+.productDetailsSliderContent {
+	width: calc(78% - 20px);
+	float: left;
+	margin-left: 20px;
+}
+.productDetailsPicSlider.owl-carousel .owl-nav button {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	font-size: 22px;
+	color: #111111;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 50%;
+	line-height: 44px;
+	text-align: center;
+	margin-top: -20px;
+}
+.productDetailsPicSlider.owl-carousel .owl-nav button.owl-next {
+	left: auto;
+	right: 10px;
+	color: #ca1515;
+}
+.productDetailsPicSlider.owl-carousel .owl-nav button.owl-prev {
+	color: #ca1515;
+}
+.productDetailsText h3 {
+	color: #111111;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+}
+.productDetailsText .rating {
+	margin-bottom: 16px;
+}
+.productDetailsText .rating i {
+	font-size: 12px;
+	color: #e3c01c;
+	margin-right: -4px;
+}
 .estrella {
-  color: #ba68c8;
-}
-/*Momentaneo, esta mal hecho*/
+	color: #e3c01c;
+} 
 textarea {
-        resize: none;
-    }
-
+	resize: none;
+}
 .rating {
-    direction:  rtl;
-    display:    inline-block;
-  }
-  
-  .rating input[type=radio]{
-    display: none;
-  }
-  
-  .rating label {
-    cursor: pointer;
-  }
-  
-  .rating label:hover,
-  .rating label:hover~label,
-  .rating input[type=radio]:checked~label {
-    color: #ba68c8;
-  }
+	direction:  rtl;
+	display:    inline-block;
+}	
+.rating input[type=radio]{
+	display: none;
+}	
+.rating label {
+	cursor: pointer;
+	color: #6C757D;
+}	
+.rating label:hover,
+.rating label:hover~label,
+.rating input[type=radio]:checked~label {
+	color: #e3c01c;
+}
+.productDetailsText .classComment {
+	font-size: 12px;
+	color: #666666;
+	margin-left: 5px;
+}
+.productDetailsText p {
+	color: #0066bd;
+	font-weight: 600;
+	margin-bottom: 28px;
+}
+.productDetailsPrice {
+	font-size: 30px;
+	font-weight: 600;
+	color: #ca1515;
+	margin-bottom: 30px;
+}
+
+.quantity {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.quantity>span {
+	font-size: 14px;
+	color: #111111;
+	font-weight: 600;
+	float: left;
+	margin-top: 14px;
+	margin-right: 15px;
+}
+.pro-qty {
+	height: 50px;
+	width: 150px;
+	border: 1px solid #ebebeb;
+	border-radius: 50px;
+	padding: 0 20px;
+	overflow: hidden;
+	display: inline-block;
+	background: white;
+}
+.pro-qty .qtybtn {
+	font-size: 14px;
+	color: #666666;
+	cursor: pointer;
+	float: left;
+	width: 12px;
+	line-height: 46px;
+}
+.pro-qty input {
+	font-size: 14px;
+	color: #666666;
+	font-weight: 500;
+	border: none;
+	float: left;
+	width: 84px;
+	text-align: center;
+	height: 48px;
+}
+.productDetailsButton {
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+.productDetailsButton .cart-btn {
+	display: inline-block;
+	font-size: 14px;
+	color: #ffffff;
+	background: #ca1515;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 14px 30px 15px;
+	border-radius: 50px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.iconHeart {
+	margin-bottom: 28px;
+}
+.iconHeart li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 5px;
+}
+.iconHeart li:last-child {
+	margin-right: 0;
+}
+.iconHeart li a {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	border: 1px solid #ebebeb;
+	border-radius: 50%;
+	line-height: 50px;
+	text-align: center;
+	padding-top: 1px;
+}
+.iconHeart li a span {
+	font-size: 18px;
+	color: #666666;
+}
+.productDetailsTab {
+	padding-top: 80px;
+	margin-bottom: 65px;
+}
+.nav {
+	border-bottom: none;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: relative;
+	margin-bottom: 40px;
+}
+.nav::before {
+	position: absolute;
+	left: 0;
+	top: 13px;
+	height: 1px;
+	width: 335px;
+	background: #e1e1e1;
+	content: "";
+}
+.nav::after {
+	position: absolute;
+	right: 0;
+	top: 13px;
+	height: 1px;
+	width: 335px;
+	background: #e1e1e1;
+	content: "";
+}
+.nav-item {
+	margin-right: 46px;
+}
+.nav-item:last-child {
+	margin-right: 0;
+}
+.nav-item .nav-link {
+	font-size: 18px;
+	color: #666666;
+	font-weight: 600;
+	border: none;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	padding: 0;
+}
+.nav-item .nav-link.active {
+	color: #111111;
+	background-color: #F5F5F5;
+}
+.tab-content .tab-pane h6 {
+	color: #666666;
+	font-weight: 600;
+	margin-bottom: 24px;
+}
+.tab-content .tab-pane p:last-child {
+	margin-bottom: 0;
+}
+.commentList .reviewItem {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e1e1e1;
+}
+.boxAC {
+	border-bottom: 1px solid #ebebeb;
+}
+.addComment {
+	margin-bottom: 50px;
+}
+.reviewAddComment div h4 {
+	text-align: center;
+}
+.reviewAddComment textarea {
+	width: 40%;
+	margin: auto;
+}
+.reviewAddComment button {
+	width: 55%;
+	margin: auto;
+}
+#rating {
+	margin: 10px;
+}
+.relatedTitle h5 {
+	font-size: 20px;
+	color: #111111;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 35px;
+}

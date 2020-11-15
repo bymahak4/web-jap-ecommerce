@@ -1,0 +1,102 @@
+<div class="col-lg-6">
+    <div class="productDetailsPic">
+        <div class="productDetailsPicLeft productThumb nice-scroll">
+            <a class="pt active" href="#product-1">
+                <img src="${productoArray.images[0]}" alt="">
+            </a>
+            <a class="pt" href="#product-2">
+                <img src="${productoArray.images[1]}" alt="">
+            </a>
+            <a class="pt" href="#product-3">
+                <img src="${productoArray.images[2]}" alt="">
+            </a>
+            <a class="pt" href="#product-4">
+                <img src="${productoArray.images[3]}" alt="">
+            </a>
+            <a class="pt" href="#product-5">
+                <img src="${productoArray.images[4]}" alt="">
+            </a>
+        </div>
+        <div class="productDetailsSliderContent">
+            <div class="productDetailsPicSlider owl-carousel">
+                <img data-hash="product-1" class="productBigImg"  src="${productoArray.images[0]}" alt="">
+                <img data-hash="product-2" class="productBigImg"  src="${productoArray.images[1]}" alt="">
+                <img data-hash="product-3" class="productBigImg"  src="${productoArray.images[2]}" alt="">
+                <img data-hash="product-4" class="productBigImg"  src="${productoArray.images[3]}" alt="">
+                <img data-hash="product-5" class="productBigImg"  src="${productoArray.images[4]}" alt="">
+            </div>
+        </div>
+    </div>
+</div>        
+<div class="col-lg-6">
+    <div class="productDetailsText">
+        <h3>${productoArray.name}</h3>
+        <span class="classComment">( 4 Comentarios )</span>
+        <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <div class="productDetailsPrice">${productoArray.currency} ${productoArray.cost}</div>
+        <p>${productoArray.soldCount} vendidos</p>
+        <ul>
+            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+        </ul>
+        <div class="productDetailsButton">
+            <div class="quantity">
+                <span>Cantidad:</span>
+                <div class="pro-qty">
+                    <input type="text" value="1">
+                </div>
+            </div>
+            <a href="#" class="cart-btn" onclick="location.href='cart.html'"><span class="icon_bag_alt"></span> Agregar al Carrito</a>
+                        
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+    <div class="productDetailsTab">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Descripción</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Especificación</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Comentarios</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                <h6>Descripción</h6>
+                <p>${productoArray.description}</p>
+            </div>
+            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                <h6>Especificación</h6>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed
+                    quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret.
+                    Neque porro lorem quisquam est, qui dolorem ipsum quia dolor si. Nemo enim ipsam
+                    voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu
+                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla
+                    consequat massa quis enim.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                    quis, sem.
+                </p>
+            </div>
+            <div class="tab-pane" id="tabs-3" role="tabpanel">
+                <h6>Comentarios</h6>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                    quis, sem.
+                </p>               
+            </div>
+        </div>
+    </div>
+</div> 
