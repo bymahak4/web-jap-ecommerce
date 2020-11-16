@@ -102,19 +102,24 @@ section p {
 
 
 .left-sidebar {
-    background-color: #787878;
+    background-color: #b4b4b4;
     float: left;
     min-height: 100%;
     position: fixed;
     width: 18%;
+    top: 0px;
+    left: 0px;
 }
 
 .logo {
+    
     padding-bottom: 30px;
     padding-left: 30px;
     padding-top: 70px;
 }
-
+.logo img {
+    margin-left: 40px;
+}
 .left-nav ul {
     margin: 0;
     padding: 0;
@@ -133,7 +138,7 @@ section p {
 }
 
 .left-nav ul li a:hover, .left-nav ul li .current {
-    background-color: #384aeb;
+    background-color: #ca1515;
     color: #fff;
 }
 

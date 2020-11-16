@@ -310,7 +310,6 @@ document.addEventListener("DOMContentLoaded", function(e){
             //$('#fechExpiry').empty();
             $('#btnBuyOnlyCar').addClass("isDisabled");
         });
-        
 
         (function ($) {
         $(window).on('load', function () {
@@ -347,9 +346,17 @@ document.addEventListener("DOMContentLoaded", function(e){
             
             $(document).on('click', '#btnAccountCar', function(e) {
                 if(buyAccCar.checkValidity() === false) {
-                    e.preventDefault();
+                    e.preventDefault();   
                 };
+               /* $('#btnBuyOnlyCar').addClass('popup-modal-dismiss');
+                console.log("jahbwldhablwd");  popup-modal-dismiss
+                $('#btnBuyOnlyCar').on('click', function() {
+                    console.log("jahbwldhablwd");
+                    $('#idSectionCart').remove();
+                });*/
             });
+
+            
 
             let buyCartTar = document.getElementById('idFormCar');
             $('#cardNumber, #cvcNumber, #fechExpiry').on('change keyup', function(e) {
